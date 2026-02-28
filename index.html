@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CarbonCart — Know Your Footprint</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛒</text></svg>" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #06100a;
+      --surface: #0d1a10;
+      --surface2: #122016;
+      --surface3: #172b1c;
+      --border: #1c2e21;
+      --border2: #243829;
+      --green: #00ff7f;
+      --green-glow: rgba(0,255,127,0.15);
+      --green-dim: #00cc63;
+      --yellow: #ffe033;
+      --orange: #ff8c00;
+      --red: #ff3333;
+      --blue: #4af0ff;
+      --text: #dff0e4;
+      --muted: #5a7d64;
+      --muted2: #3d5543;
+      --font: 'Syne', sans-serif;
+      --mono: 'DM Mono', monospace;
+      --radius: 16px;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); min-height: 100vh; overflow-x: hidden; }
+    body::after { content:''; position:fixed; inset:0; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:9999; }
+
+    /* NAV */
+    nav { position:sticky; top:0; z-index:100; background:rgba(6,16,10,0.9); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:0 40px; height:64px; display:flex; align-items:center; justify-content:space-between; }
+    .nav-logo { display:flex; align-items:center; gap:10px; font-size:1.2rem; font-weight:800; letter-spacing:-0.02em; }
+    .nav-logo-icon { width:36px; height:36px; background:var(--green); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:18px; box-shadow:0 0 20px var(--green-glow); }
+    .nav-logo span { color:var(--green); }
+    .nav-right { display:flex; align-items:center; gap:20px; }
+    .nav-stat { font-family:var(--mono); font-size:0.72rem; color:var(--muted); text-align:center; }
+    .nav-stat strong { color:var(--green); display:block; font-size:0.95rem; }
+    .nav-badge { padding:8px 18px; background:var(--green-glow); border:1px solid rgba(0,255,127,0.3); border-radius:100px; font-family:var(--mono); font-size:0.85rem; color:var(--green); transition:all 0.3s; }
+    .nav-badge.has-items { background:var(--green); color:#06100a; font-weight:700; box-shadow:0 0 20px rgba(0,255,127,0.3); }
+    @media(max-width:800px){ nav{padding:0 16px;} .nav-stat{display:none;} }
+
+    /* HERO */
+    .hero { padding:80px 40px 60px; max-width:1400px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    @media(max-width:900px){ .hero{grid-template-columns:1fr;gap:40px;padding:40px 20px;} }
+    .hero-eyebrow { display:inline-flex; align-items:center; gap:8px; padding:6px 14px; background:var(--green-glow); border:1px solid rgba(0,255,127,0.25); border-radius:100px; font-family:var(--mono); font-size:0.72rem; color:var(--green); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:24px; }
+    .hero-eyebrow::before { content:''; width:6px; height:6px; background:var(--green); border-radius:50%; animation:blink 2s infinite; }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
+    .hero h1 { font-size:clamp(2.6rem,4.5vw,4.2rem); font-weight:800; line-height:1.05; letter-spacing:-0.04em; margin-bottom:20px; }
+    .hero h1 .g { color:var(--green); }
+    .hero p { font-size:1.05rem; color:var(--muted); line-height:1.7; max-width:460px; margin-bottom:32px; }
+    .hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn-p { padding:14px 28px; background:var(--green); color:#06100a; border:none; border-radius:12px; font-family:var(--font); font-size:0.95rem; font-weight:700; cursor:pointer; transition:all 0.2s; box-shadow:0 0 30px rgba(0,255,127,0.2); }
+    .btn-p:hover { background:var(--green-dim); transform:translateY(-2px); }
+    .btn-s { padding:14px 28px; background:transparent; color:var(--text); border:1px solid var(--border2); border-radius:12px; font-family:var(--font); font-size:0.95rem; cursor:pointer; transition:all 0.2s; }
+    .btn-s:hover { border-color:var(--green); color:var(--green); }
+    .hero-card { background:var(--surface); border:1px solid var(--border2); border-radius:24px; padding:32px; position:relative; overflow:hidden; }
+    .hero-card::before { content:''; position:absolute; top:-60px; right:-60px; width:200px; height:200px; background:radial-gradient(circle,rgba(0,255,127,0.06) 0%,transparent 70%); pointer-events:none; }
+    .hc-label { font-family:var(--mono); font-size:0.72rem; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px; }
+    .hc-num { font-size:3.8rem; font-weight:800; font-family:var(--mono); letter-spacing:-0.05em; color:var(--green); line-height:1; }
+    .hc-sub { font-size:0.88rem; color:var(--muted); margin-top:6px; margin-bottom:24px; }
+    .hc-facts { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .hc-fact { background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:14px; }
+    .hc-fact-icon { font-size:1.3rem; margin-bottom:5px; }
+    .hc-fact-val { font-weight:700; font-size:1rem; }
+    .hc-fact-desc { font-size:0.72rem; color:var(--muted); margin-top:2px; }
+
+    /* MAIN */
+    .main { max-width:1400px; margin:0 auto; padding:0 40px 100px; }
+    @media(max-width:900px){ .main{padding:0 16px 60px;} }
+    .layout { display:grid; grid-template-columns:1fr 380px; gap:28px; align-items:start; }
+    @media(max-width:1100px){ .layout{grid-template-columns:1fr;} .sidebar{position:static!important;} }
+
+    /* Section header */
+    .sec-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:22px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+    .sec-title { font-size:0.72rem; font-family:var(--mono); color:var(--muted); letter-spacing:0.12em; text-transform:uppercase; }
+
+    /* Cat tabs */
+    .cat-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+    .cat-tab { padding:9px 16px; border-radius:100px; border:1px solid var(--border2); background:var(--surface); color:var(--muted); font-family:var(--font); font-size:0.85rem; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; gap:7px; }
+    .cat-tab:hover { border-color:var(--green); color:var(--text); }
+    .cat-tab.active { background:var(--green); border-color:var(--green); color:#06100a; font-weight:700; box-shadow:0 0 20px rgba(0,255,127,0.15); }
+    .cc { background:rgba(0,0,0,0.15); border-radius:100px; padding:1px 7px; font-size:0.7rem; font-family:var(--mono); }
+
+    /* Search */
+    .search { position:relative; margin-bottom:22px; }
+    .search input { width:100%; padding:13px 18px 13px 46px; background:var(--surface); border:1px solid var(--border2); border-radius:14px; color:var(--text); font-family:var(--font); font-size:0.95rem; outline:none; transition:border-color 0.2s,box-shadow 0.2s; }
+    .search input:focus { border-color:var(--green); box-shadow:0 0 0 3px rgba(0,255,127,0.07); }
+    .search input::placeholder { color:var(--muted2); }
+    .search-ic { position:absolute; left:15px; top:50%; transform:translateY(-50%); font-size:17px; color:var(--muted2); pointer-events:none; }
+
+    /* Grid */
+    .pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:14px; }
+    .pcard { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:20px; cursor:default; transition:all 0.2s; }
+    .pcard:hover { border-color:var(--border2); transform:translateY(-2px); box-shadow:0 8px 28px rgba(0,0,0,0.4); }
+    .pcard-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:13px; }
+    .pcard-name { font-size:0.92rem; font-weight:600; line-height:1.3; flex:1; padding-right:10px; }
+    .grade-chip { width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:0.75rem; font-weight:700; flex-shrink:0; }
+    .pcard-kg { display:flex; align-items:baseline; gap:4px; margin-bottom:11px; }
+    .pcard-num { font-size:1.7rem; font-weight:800; font-family:var(--mono); line-height:1; letter-spacing:-0.04em; }
+    .pcard-unit { font-size:0.75rem; color:var(--muted); font-family:var(--mono); }
+    .pcard-bar { height:4px; background:var(--surface2); border-radius:100px; overflow:hidden; margin-bottom:13px; }
+    .pcard-bar-fill { height:100%; border-radius:100px; }
+    .pcard-acts { display:flex; gap:8px; }
+    .add-btn { flex:1; padding:9px; background:var(--green-glow); border:1px solid rgba(0,255,127,0.25); border-radius:10px; color:var(--green); font-family:var(--font); font-size:0.8rem; font-weight:700; cursor:pointer; transition:all 0.2s; }
+    .add-btn:hover { background:var(--green); color:#06100a; }
+    .info-btn { width:35px; padding:9px; background:var(--surface2); border:1px solid var(--border2); border-radius:10px; color:var(--muted); cursor:pointer; transition:all 0.2s; font-size:13px; display:flex; align-items:center; justify-content:center; }
+    .info-btn:hover { border-color:var(--blue); color:var(--blue); }
+    .no-res { grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--muted2); }
+
+    /* SIDEBAR */
+    .sidebar { position:sticky; top:80px; display:flex; flex-direction:column; gap:16px; }
+    .scard { background:var(--surface); border:1px solid var(--border); border-radius:20px; overflow:hidden; }
+    .scard-head { padding:18px 20px 14px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+    .scard-title { font-size:0.72rem; font-family:var(--mono); color:var(--muted); letter-spacing:0.1em; text-transform:uppercase; }
+    .scard-sub { font-family:var(--mono); font-size:0.72rem; color:var(--muted); }
+
+    /* Total */
+    .total-disp { padding:22px 20px; }
+    .total-num { font-size:3.2rem; font-weight:800; font-family:var(--mono); line-height:1; letter-spacing:-0.04em; color:var(--muted2); transition:color 0.4s; }
+    .total-num.live { color:var(--green); }
+    .total-unit { font-family:var(--mono); font-size:0.85rem; color:var(--muted); margin-top:4px; margin-bottom:14px; }
+    .v-bar { height:6px; border-radius:100px; background:var(--surface2); overflow:hidden; margin-bottom:10px; }
+    .v-fill { height:100%; border-radius:100px; transition:width 0.5s ease,background 0.4s; }
+    .v-text { font-size:0.8rem; color:var(--muted); line-height:1.5; }
+
+    /* Cart items */
+    .cart-wrap { padding:0 20px 14px; }
+    .cart-empty { padding:26px 0; text-align:center; color:var(--muted2); font-size:0.82rem; }
+    .empty-ic { font-size:2.2rem; display:block; margin-bottom:8px; opacity:0.35; }
+    .ci { display:flex; align-items:center; gap:8px; padding:9px 0; border-bottom:1px solid var(--border); }
+    .ci:last-child { border-bottom:none; }
+    .ci-name { flex:1; font-size:0.82rem; line-height:1.3; }
+    .ci-kg { font-family:var(--mono); font-size:0.75rem; color:var(--muted); flex-shrink:0; }
+    .qc { display:flex; align-items:center; gap:5px; flex-shrink:0; }
+    .qb { width:22px; height:22px; border-radius:5px; border:1px solid var(--border2); background:var(--surface2); color:var(--text); cursor:pointer; font-size:13px; display:flex; align-items:center; justify-content:center; transition:all 0.15s; }
+    .qb:hover { border-color:var(--green); color:var(--green); }
+    .qn { font-family:var(--mono); font-size:0.78rem; min-width:16px; text-align:center; }
+    .rmb { background:none; border:none; color:var(--muted2); cursor:pointer; font-size:13px; padding:2px; transition:color 0.15s; }
+    .rmb:hover { color:var(--red); }
+    .cart-foot { padding:12px 20px 18px; border-top:1px solid var(--border); }
+    .clr-btn { width:100%; padding:9px; background:transparent; border:1px solid var(--border2); border-radius:10px; color:var(--muted); font-family:var(--font); font-size:0.8rem; cursor:pointer; transition:all 0.2s; }
+    .clr-btn:hover { border-color:var(--red); color:var(--red); }
+
+    /* Comps */
+    .comp-grid { padding:14px 20px 18px; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .comp-item { background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:13px 10px; text-align:center; }
+    .comp-ic { font-size:1.4rem; margin-bottom:5px; }
+    .comp-v { font-family:var(--mono); font-size:1.1rem; font-weight:700; color:var(--green); line-height:1; }
+    .comp-l { font-size:0.68rem; color:var(--muted); margin-top:3px; line-height:1.3; }
+
+    /* Breakdown */
+    .bk-wrap { padding:4px 20px 18px; }
+    .brow { display:flex; align-items:center; gap:10px; margin-bottom:9px; }
+    .bname { width:110px; font-size:0.75rem; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex-shrink:0; }
+    .btrack { flex:1; height:7px; background:var(--surface2); border-radius:100px; overflow:hidden; }
+    .bfill { height:100%; border-radius:100px; transition:width 0.5s ease; }
+    .bval { font-family:var(--mono); font-size:0.7rem; color:var(--muted); width:50px; text-align:right; flex-shrink:0; }
+
+    /* GRADE COLORS */
+    .gA{background:rgba(0,255,127,0.12);color:#00ff7f;} .gB{background:rgba(80,220,100,0.12);color:#50dc64;}
+    .gC{background:rgba(255,224,51,0.12);color:#ffe033;} .gD{background:rgba(255,140,0,0.12);color:#ff8c00;}
+    .gE{background:rgba(255,80,60,0.12);color:#ff503c;} .gF{background:rgba(255,51,51,0.12);color:#ff3333;}
+    .bA{background:#00ff7f;} .bB{background:#50dc64;} .bC{background:#ffe033;} .bD{background:#ff8c00;} .bE{background:#ff503c;} .bF{background:#ff3333;}
+
+    /* MODAL */
+    .overlay { position:fixed; inset:0; background:rgba(6,16,10,0.88); backdrop-filter:blur(12px); z-index:500; display:none; align-items:center; justify-content:center; padding:20px; }
+    .overlay.open { display:flex; }
+    .modal { background:var(--surface); border:1px solid var(--border2); border-radius:24px; width:100%; max-width:500px; overflow:hidden; animation:mIn 0.25s ease; }
+    @keyframes mIn { from{opacity:0;transform:scale(0.95) translateY(12px);} to{opacity:1;transform:scale(1) translateY(0);} }
+    .mhead { padding:26px 28px 18px; display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid var(--border); position:relative; }
+    .mtitle { font-size:1.35rem; font-weight:700; margin-bottom:4px; }
+    .msub { font-size:0.82rem; color:var(--muted); }
+    .mgrade { font-family:var(--mono); font-size:2rem; font-weight:800; width:60px; height:60px; border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .mclose { position:absolute; top:16px; right:16px; width:30px; height:30px; border-radius:8px; border:1px solid var(--border2); background:var(--surface2); color:var(--muted); cursor:pointer; font-size:15px; display:flex; align-items:center; justify-content:center; transition:all 0.15s; }
+    .mclose:hover { border-color:var(--red); color:var(--red); }
+    .mbody { padding:22px 28px 26px; }
+    .mco2 { display:flex; align-items:baseline; gap:8px; margin-bottom:18px; }
+    .mco2n { font-size:3.2rem; font-weight:800; font-family:var(--mono); line-height:1; letter-spacing:-0.04em; }
+    .mco2u { font-family:var(--mono); font-size:0.95rem; color:var(--muted); }
+    .ring-row { display:flex; align-items:center; gap:18px; margin-bottom:18px; padding:14px; background:var(--surface2); border-radius:14px; border:1px solid var(--border); }
+    .ring-svg { width:68px; height:68px; flex-shrink:0; }
+    .ring-svg circle { fill:none; stroke-width:7; stroke-linecap:round; }
+    .rt { stroke:var(--surface3); }
+    .rf { transition:stroke-dasharray 0.7s ease; transform:rotate(-90deg); transform-origin:center; }
+    .rit { font-size:0.95rem; font-weight:700; margin-bottom:4px; }
+    .ris { font-size:0.8rem; color:var(--muted); line-height:1.5; }
+    .mtip { padding:13px 15px; background:rgba(0,255,127,0.05); border:1px solid rgba(0,255,127,0.18); border-radius:12px; font-size:0.85rem; line-height:1.6; margin-bottom:18px; }
+    .mtip::before { content:'💡 '; }
+    .mcomps { display:grid; grid-template-columns:repeat(3,1fr); gap:9px; margin-bottom:22px; }
+    .mc { text-align:center; background:var(--surface2); border:1px solid var(--border); border-radius:12px; padding:12px 8px; }
+    .mc-ic { font-size:1.2rem; margin-bottom:4px; }
+    .mc-v { font-family:var(--mono); font-size:0.9rem; font-weight:700; }
+    .mc-l { font-size:0.65rem; color:var(--muted); margin-top:2px; line-height:1.3; }
+    .madd { width:100%; padding:15px; background:var(--green); border:none; border-radius:12px; color:#06100a; font-family:var(--font); font-size:0.98rem; font-weight:700; cursor:pointer; transition:all 0.2s; box-shadow:0 0 28px rgba(0,255,127,0.18); }
+    .madd:hover { background:var(--green-dim); transform:translateY(-1px); }
+
+    /* TOAST */
+    .toast { position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(80px); background:var(--green); color:#06100a; padding:11px 24px; border-radius:100px; font-weight:700; font-size:0.85rem; opacity:0; transition:all 0.3s; z-index:9000; white-space:nowrap; }
+    .toast.show { transform:translateX(-50%) translateY(0); opacity:1; }
+
+    /* FOOTER */
+    footer { border-top:1px solid var(--border); padding:28px 40px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-family:var(--mono); font-size:0.72rem; color:var(--muted2); }
+    footer a { color:var(--green); text-decoration:none; }
+    ::-webkit-scrollbar{width:4px;} ::-webkit-scrollbar-track{background:transparent;} ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px;}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-icon">🛒</div>
+    Carbon<span>Cart</span>
+  </div>
+  <div class="nav-right">
+    <div class="nav-stat"><strong id="nProd">44</strong>Products</div>
+    <div class="nav-stat"><strong>5</strong>Categories</div>
+    <div class="nav-stat"><strong id="nCart">0</strong>In cart</div>
+    <div class="nav-badge" id="navBadge">🌿 0.0 kg CO₂</div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">Open Data · 44 Products · 5 Categories</div>
+    <h1>The <span class="g">carbon price tag</span> that never shows at checkout</h1>
+    <p>Every product has an environmental cost invisible to shoppers. CarbonCart makes it real — add items, see your footprint, get eco-grades and tips to do better.</p>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="document.querySelector('.main').scrollIntoView({behavior:'smooth'})">Start Building Cart →</button>
+      <button class="btn-s" onclick="loadDemo()">Load Demo Cart</button>
+    </div>
+  </div>
+  <div>
+    <div class="hero-card">
+      <div class="hc-label">Average annual purchase footprint</div>
+      <div class="hc-num">2,847</div>
+      <div class="hc-sub">kg CO₂e from consumer goods per year</div>
+      <div class="hc-facts">
+        <div class="hc-fact"><div class="hc-fact-icon">✈️</div><div class="hc-fact-val">3.4 flights</div><div class="hc-fact-desc">London ↔ New York</div></div>
+        <div class="hc-fact"><div class="hc-fact-icon">🌳</div><div class="hc-fact-val">130 trees</div><div class="hc-fact-desc">needed to offset for 1 year</div></div>
+        <div class="hc-fact"><div class="hc-fact-icon">🚗</div><div class="hc-fact-val">13,557 km</div><div class="hc-fact-desc">in a petrol car</div></div>
+        <div class="hc-fact"><div class="hc-fact-icon">📅</div><div class="hc-fact-val">71%</div><div class="hc-fact-desc">of global avg annual budget</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN APP -->
+<div class="main">
+  <div class="layout">
+
+    <!-- Products -->
+    <div>
+      <div class="sec-head">
+        <span class="sec-title">Browse &amp; Add Products</span>
+        <span id="resCount" style="font-family:var(--mono);font-size:0.72rem;color:var(--muted)"></span>
+      </div>
+      <div class="cat-tabs" id="catTabs"></div>
+      <div class="search">
+        <span class="search-ic">🔍</span>
+        <input type="text" id="searchInput" placeholder="Search — beef, laptop, flight, jeans…" />
+      </div>
+      <div class="pgrid" id="pgrid"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+      <!-- Total card -->
+      <div class="scard">
+        <div class="scard-head">
+          <span class="scard-title">Carbon Total</span>
+          <span class="scard-sub" id="cCount"></span>
+        </div>
+        <div class="total-disp">
+          <div class="total-num" id="totalNum">0.0</div>
+          <div class="total-unit">kg CO₂ equivalent</div>
+          <div class="v-bar"><div class="v-fill" id="vFill" style="width:0%;background:var(--muted2)"></div></div>
+          <div class="v-text" id="vText">Add products to see your carbon footprint.</div>
+        </div>
+      </div>
+
+      <!-- Cart -->
+      <div class="scard">
+        <div class="scard-head"><span class="scard-title">Your Cart</span></div>
+        <div class="cart-wrap" id="cartWrap">
+          <div class="cart-empty"><span class="empty-ic">🛒</span>No items yet.<br/>Click + on any product.</div>
+        </div>
+        <div class="cart-foot" id="cartFoot" style="display:none">
+          <button class="clr-btn" onclick="clearCart()">✕ Clear all items</button>
+        </div>
+      </div>
+
+      <!-- Equivalents -->
+      <div class="scard" id="compCard" style="display:none">
+        <div class="scard-head"><span class="scard-title">That's Equivalent To…</span></div>
+        <div class="comp-grid" id="compGrid"></div>
+      </div>
+
+      <!-- Breakdown -->
+      <div class="scard" id="bkCard" style="display:none">
+        <div class="scard-head"><span class="scard-title">Breakdown by Item</span></div>
+        <div class="bk-wrap" id="bkWrap"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="overlay" id="overlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="mhead">
+      <div>
+        <div class="mtitle" id="mTitle"></div>
+        <div class="msub" id="mSub"></div>
+      </div>
+      <div class="mgrade" id="mGrade"></div>
+      <button class="mclose" onclick="closeModal()">✕</button>
+    </div>
+    <div class="mbody">
+      <div class="mco2">
+        <div class="mco2n" id="mNum"></div>
+        <div class="mco2u">kg CO₂e</div>
+      </div>
+      <div class="ring-row">
+        <svg class="ring-svg" viewBox="0 0 68 68">
+          <circle class="rt" cx="34" cy="34" r="27"/>
+          <circle class="rf" id="rf" cx="34" cy="34" r="27" stroke-dasharray="0 170"/>
+        </svg>
+        <div>
+          <div class="rit" id="rTitle"></div>
+          <div class="ris" id="rSub"></div>
+        </div>
+      </div>
+      <div class="mtip" id="mTip"></div>
+      <div class="mcomps" id="mComps"></div>
+      <button class="madd" id="mAdd">+ Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>🛒 <strong style="color:var(--text)">CarbonCart</strong> · Dev Season of Code 2026</div>
+  <div>Data sources: EPA · ADEME · Open LCA</div>
+  <div><a href="https://github.com/shnhdan/carboncart" target="_blank">View on GitHub ↗</a></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+  let DATA=null, currentCat='all', cart={};
+  const GC={A:'#00ff7f',B:'#50dc64',C:'#ffe033',D:'#ff8c00',E:'#ff503c',F:'#ff3333'};
+  const CIRC=2*Math.PI*27;
+
+  async function loadData(){
+    const r=await fetch('emissions_enriched.json');
+    DATA=await r.json();
+    buildTabs();
+    renderGrid();
+    document.getElementById('searchInput').addEventListener('input',renderGrid);
+  }
+
+  function buildTabs(){
+    const el=document.getElementById('catTabs');
+    const tot=Object.values(DATA.categories).reduce((s,c)=>s+c.stats.item_count,0);
+    let h=`<button class="cat-tab active" onclick="selCat('all',this)">🌐 All <span class="cc">${tot}</span></button>`;
+    Object.entries(DATA.categories).forEach(([k,c])=>{
+      h+=`<button class="cat-tab" onclick="selCat('${k}',this)">${c.icon} ${c.label} <span class="cc">${c.stats.item_count}</span></button>`;
+    });
+    el.innerHTML=h;
+  }
+
+  function selCat(k,btn){
+    currentCat=k;
+    document.querySelectorAll('.cat-tab').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGrid();
+  }
+
+  function renderGrid(){
+    const q=document.getElementById('searchInput').value.toLowerCase().trim();
+    const cats=currentCat==='all'?Object.entries(DATA.categories):[[currentCat,DATA.categories[currentCat]]];
+    let html='',count=0;
+    const catMax={};
+    cats.forEach(([ck,c])=>catMax[ck]=c.stats.max_kg);
+
+    cats.forEach(([ck,cat])=>{
+      Object.entries(cat.items).forEach(([ik,item])=>{
+        if(q&&!item.label.toLowerCase().includes(q))return;
+        count++;
+        const g=item.eco_grade;
+        const pct=(item.kg_co2/catMax[ck]*100).toFixed(1);
+        html+=`
+          <div class="pcard">
+            <div class="pcard-top">
+              <div class="pcard-name">${item.label}</div>
+              <div class="grade-chip g${g}">${g}</div>
+            </div>
+            <div class="pcard-kg">
+              <div class="pcard-num" style="color:${GC[g]}">${item.kg_co2}</div>
+              <div class="pcard-unit">kg CO₂e</div>
+            </div>
+            <div class="pcard-bar"><div class="pcard-bar-fill b${g}" style="width:${pct}%"></div></div>
+            <div class="pcard-acts">
+              <button class="add-btn" onclick="addToCart('${ck}','${ik}')">+ Add to Cart</button>
+              <button class="info-btn" onclick="openModal('${ck}','${ik}')">ℹ</button>
+            </div>
+          </div>`;
+      });
+    });
+
+    if(!count) html=`<div class="no-res"><div style="font-size:2.5rem;margin-bottom:10px">🌿</div><div>No products match "<strong>${q}</strong>"</div></div>`;
+    document.getElementById('pgrid').innerHTML=html;
+    document.getElementById('resCount').textContent=count?`${count} products`:'';
+  }
+
+  function openModal(ck,ik){
+    const item=DATA.categories[ck].items[ik];
+    const cat=DATA.categories[ck];
+    const g=item.eco_grade;
+
+    document.getElementById('mTitle').textContent=item.label;
+    document.getElementById('mSub').textContent=`${cat.label} · Eco Grade ${g}`;
+
+    const mg=document.getElementById('mGrade');
+    mg.textContent=g; mg.className=`mgrade g${g}`;
+
+    const mn=document.getElementById('mNum');
+    mn.textContent=item.kg_co2; mn.style.color=GC[g];
+
+    const pct=item.global_percentile;
+    const rf=document.getElementById('rf');
+    rf.style.strokeDasharray=`${(pct/100)*CIRC} ${CIRC}`;
+    rf.style.stroke=GC[g];
+
+    document.getElementById('rTitle').textContent=`Higher than ${pct}% of all products`;
+    document.getElementById('rSub').textContent=`Category avg: ${cat.stats.avg_kg} kg CO₂e`;
+    document.getElementById('mTip').textContent=item.tip;
+
+    const c=item.comparisons;
+    document.getElementById('mComps').innerHTML=`
+      <div class="mc"><div class="mc-ic">🚗</div><div class="mc-v">${parseInt(c.car_km).toLocaleString()}</div><div class="mc-l">km petrol car</div></div>
+      <div class="mc"><div class="mc-ic">🌳</div><div class="mc-v">${c.tree_months}</div><div class="mc-l">months 1 tree absorbs</div></div>
+      <div class="mc"><div class="mc-ic">📅</div><div class="mc-v">${c.pct_annual}%</div><div class="mc-l">of annual budget</div></div>`;
+
+    document.getElementById('mAdd').onclick=()=>{ addToCart(ck,ik); closeModal(); };
+    document.getElementById('overlay').classList.add('open');
+  }
+
+  function closeModal(){ document.getElementById('overlay').classList.remove('open'); }
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeModal(); });
+
+  function addToCart(ck,ik){
+    const id=`${ck}/${ik}`;
+    if(cart[id])cart[id].qty++;
+    else cart[id]={ck,ik,item:DATA.categories[ck].items[ik],qty:1};
+    renderCart();
+    toast(`Added ${DATA.categories[ck].items[ik].label}`);
+  }
+
+  function chQty(id,d){
+    if(!cart[id])return;
+    cart[id].qty+=d;
+    if(cart[id].qty<=0)delete cart[id];
+    renderCart();
+  }
+
+  function clearCart(){ cart={}; renderCart(); toast('Cart cleared'); }
+
+  function loadDemo(){
+    if(!DATA)return;
+    cart={
+      'electronics/laptop':{ck:'electronics',ik:'laptop',item:DATA.categories.electronics.items.laptop,qty:1},
+      'food/beef_1kg':{ck:'food',ik:'beef_1kg',item:DATA.categories.food.items.beef_1kg,qty:2},
+      'transport/flight_short':{ck:'transport',ik:'flight_short',item:DATA.categories.transport.items.flight_short,qty:1},
+      'clothing/jeans':{ck:'clothing',ik:'jeans',item:DATA.categories.clothing.items.jeans,qty:1},
+    };
+    renderCart();
+    document.querySelector('.main').scrollIntoView({behavior:'smooth'});
+    toast('Demo cart loaded!');
+  }
+
+  function renderCart(){
+    const entries=Object.entries(cart);
+    const total=entries.reduce((s,[,e])=>s+e.item.kg_co2*e.qty,0);
+
+    // Nav
+    const badge=document.getElementById('navBadge');
+    badge.textContent=`🛒 ${total.toFixed(1)} kg CO₂`;
+    badge.className=`nav-badge${entries.length?' has-items':''}`;
+    document.getElementById('nCart').textContent=entries.length;
+
+    // Total
+    const tn=document.getElementById('totalNum');
+    tn.textContent=total.toFixed(1);
+    tn.className=`total-num${total>0?' live':''}`;
+
+    const maxScale=2000;
+    const pct=Math.min(total/maxScale*100,100);
+    const vf=document.getElementById('vFill');
+    vf.style.width=`${pct}%`;
+
+    let vc,vm;
+    if(total===0){ vf.style.background='var(--muted2)'; document.getElementById('vText').textContent='Add products to see your carbon footprint.'; }
+    else if(total<30){ vc='#00ff7f'; vm='✅ Excellent — very low footprint!'; }
+    else if(total<150){ vc='#ffe033'; vm='🌤 Moderate — a few swaps could help a lot.'; }
+    else if(total<600){ vc='#ff8c00'; vm='⚠️ High impact — check the breakdown for offenders.'; }
+    else { vc='#ff3333'; vm='🔴 Very high — exceeds months of an average person\'s budget.'; }
+    if(total>0){ vf.style.background=vc; document.getElementById('vText').textContent=vm; }
+
+    document.getElementById('cCount').textContent=entries.length?`${entries.length} item${entries.length>1?'s':''}` :'';
+
+    const wrap=document.getElementById('cartWrap');
+    const foot=document.getElementById('cartFoot');
+
+    if(!entries.length){
+      wrap.innerHTML=`<div class="cart-empty"><span class="empty-ic">🛒</span>No items yet.<br/>Click + on any product.</div>`;
+      foot.style.display='none';
+      document.getElementById('compCard').style.display='none';
+      document.getElementById('bkCard').style.display='none';
+      return;
+    }
+
+    foot.style.display='block';
+    wrap.innerHTML=entries.map(([id,e])=>{
+      const kg=(e.item.kg_co2*e.qty).toFixed(1);
+      return `<div class="ci">
+        <div class="ci-name">${e.qty>1?`<span style="color:var(--muted);font-size:0.75rem">${e.qty}× </span>`:''}${e.item.label}</div>
+        <div class="qc">
+          <button class="qb" onclick="chQty('${id}',-1)">−</button>
+          <span class="qn">${e.qty}</span>
+          <button class="qb" onclick="chQty('${id}',1)">+</button>
+        </div>
+        <div class="ci-kg">${kg}kg</div>
+        <button class="rmb" onclick="chQty('${id}',-${e.qty})">✕</button>
+      </div>`;
+    }).join('');
+
+    // Comparisons
+    const carKm=parseInt(total/0.21).toLocaleString();
+    const treeM=(total/21.77*12).toFixed(1);
+    const avgD=(total/(4000/365)).toFixed(0);
+    const flt=(total/255).toFixed(1);
+    document.getElementById('compCard').style.display='block';
+    document.getElementById('compGrid').innerHTML=`
+      <div class="comp-item"><div class="comp-ic">🚗</div><div class="comp-v">${carKm}</div><div class="comp-l">km in petrol car</div></div>
+      <div class="comp-item"><div class="comp-ic">🌳</div><div class="comp-v">${treeM}</div><div class="comp-l">months for 1 tree</div></div>
+      <div class="comp-item"><div class="comp-ic">📅</div><div class="comp-v">${avgD}</div><div class="comp-l">days of avg budget</div></div>
+      <div class="comp-item"><div class="comp-ic">✈️</div><div class="comp-v">${flt}</div><div class="comp-l">short-haul flights</div></div>`;
+
+    // Breakdown
+    const sorted=[...entries].sort((a,b)=>(b[1].item.kg_co2*b[1].qty)-(a[1].item.kg_co2*a[1].qty));
+    const mx=sorted[0][1].item.kg_co2*sorted[0][1].qty;
+    document.getElementById('bkCard').style.display='block';
+    document.getElementById('bkWrap').innerHTML=sorted.map(([,e])=>{
+      const kg=e.item.kg_co2*e.qty;
+      const p=(kg/mx*100).toFixed(0);
+      const g=e.item.eco_grade;
+      return `<div class="brow">
+        <div class="bname" title="${e.item.label}">${e.item.label}</div>
+        <div class="btrack"><div class="bfill b${g}" style="width:${p}%"></div></div>
+        <div class="bval">${kg.toFixed(1)} kg</div>
+      </div>`;
+    }).join('');
+  }
+
+  function toast(msg){
+    const t=document.getElementById('toast');
+    t.textContent=msg; t.classList.add('show');
+    clearTimeout(t._t); t._t=setTimeout(()=>t.classList.remove('show'),2200);
+  }
+
+  loadData().catch(()=>{
+    document.body.innerHTML+=`<div style="position:fixed;inset:0;background:#06100a;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#ff3333;font-family:monospace;font-size:1rem;z-index:9999;gap:12px;padding:40px;text-align:center">
+      <div style="font-size:3rem">⚠️</div>
+      <div>Failed to load emissions data.</div>
+      <code style="background:#0d1a10;padding:10px 20px;border-radius:8px;font-size:0.85rem">python3 pipeline/enrich_data.py</code>
+    </div>`;
+  });
+</script>
+</body>
+</html>

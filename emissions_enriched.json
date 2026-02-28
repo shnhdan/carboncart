@@ -1,0 +1,655 @@
+{
+  "meta": {
+    "pipeline_version": "1.1.0",
+    "avg_person_annual_kg": 4000
+  },
+  "version": "1.0.0",
+  "last_updated": "2026-02-28",
+  "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+  "categories": {
+    "electronics": {
+      "label": "Electronics",
+      "icon": "\ud83d\udcbb",
+      "default_kg_co2": 300,
+      "stats": {
+        "max_kg": 400,
+        "min_kg": 25,
+        "avg_kg": 178.4,
+        "item_count": 10
+      },
+      "items": {
+        "smartphone": {
+          "label": "Smartphone",
+          "kg_co2": 70,
+          "tip": "Keep your phone 1 extra year to cut impact by 30%",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 333.3,
+            "tree_months": 38.6,
+            "pct_annual": 1.75
+          },
+          "category_percentile": 20,
+          "global_percentile": 68
+        },
+        "laptop": {
+          "label": "Laptop",
+          "kg_co2": 300,
+          "tip": "Refurbished laptops save ~200kg CO\u2082",
+          "eco_grade": "E",
+          "comparisons": {
+            "car_km": 1428.6,
+            "tree_months": 165.4,
+            "pct_annual": 7.5
+          },
+          "category_percentile": 70,
+          "global_percentile": 89
+        },
+        "tablet": {
+          "label": "Tablet",
+          "kg_co2": 100,
+          "tip": "Share devices when possible",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 476.2,
+            "tree_months": 55.1,
+            "pct_annual": 2.5
+          },
+          "category_percentile": 40,
+          "global_percentile": 73
+        },
+        "desktop": {
+          "label": "Desktop PC",
+          "kg_co2": 400,
+          "tip": "Energy Star models use 65% less energy",
+          "eco_grade": "F",
+          "comparisons": {
+            "car_km": 1904.8,
+            "tree_months": 220.5,
+            "pct_annual": 10.0
+          },
+          "category_percentile": 80,
+          "global_percentile": 93
+        },
+        "monitor": {
+          "label": "Monitor",
+          "kg_co2": 250,
+          "tip": "LED monitors use 40% less power than LCD",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 1190.5,
+            "tree_months": 137.8,
+            "pct_annual": 6.25
+          },
+          "category_percentile": 60,
+          "global_percentile": 82
+        },
+        "headphones": {
+          "label": "Headphones",
+          "kg_co2": 25,
+          "tip": "Wired headphones last longer and use no batteries",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 119.0,
+            "tree_months": 13.8,
+            "pct_annual": 0.62
+          },
+          "category_percentile": 0,
+          "global_percentile": 48
+        },
+        "smartwatch": {
+          "label": "Smartwatch",
+          "kg_co2": 30,
+          "tip": "Repair before replacing",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 142.9,
+            "tree_months": 16.5,
+            "pct_annual": 0.75
+          },
+          "category_percentile": 10,
+          "global_percentile": 57
+        },
+        "tv": {
+          "label": "TV (55\")",
+          "kg_co2": 400,
+          "tip": "OLED TVs are more energy efficient",
+          "eco_grade": "F",
+          "comparisons": {
+            "car_km": 1904.8,
+            "tree_months": 220.5,
+            "pct_annual": 10.0
+          },
+          "category_percentile": 80,
+          "global_percentile": 93
+        },
+        "gaming_console": {
+          "label": "Gaming Console",
+          "kg_co2": 89,
+          "tip": "Use sleep mode instead of standby",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 423.8,
+            "tree_months": 49.1,
+            "pct_annual": 2.23
+          },
+          "category_percentile": 30,
+          "global_percentile": 70
+        },
+        "printer": {
+          "label": "Printer",
+          "kg_co2": 120,
+          "tip": "Print double-sided and use recycled paper",
+          "eco_grade": "C",
+          "comparisons": {
+            "car_km": 571.4,
+            "tree_months": 66.1,
+            "pct_annual": 3.0
+          },
+          "category_percentile": 50,
+          "global_percentile": 75
+        }
+      }
+    },
+    "clothing": {
+      "label": "Clothing & Fashion",
+      "icon": "\ud83d\udc55",
+      "default_kg_co2": 10,
+      "stats": {
+        "max_kg": 45,
+        "min_kg": 5,
+        "avg_kg": 22.25,
+        "item_count": 8
+      },
+      "items": {
+        "tshirt_cotton": {
+          "label": "Cotton T-Shirt",
+          "kg_co2": 7,
+          "tip": "Organic cotton uses 91% less water",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 33.3,
+            "tree_months": 3.9,
+            "pct_annual": 0.18
+          },
+          "category_percentile": 12,
+          "global_percentile": 23
+        },
+        "jeans": {
+          "label": "Denim Jeans",
+          "kg_co2": 33,
+          "tip": "Wash jeans less \u2014 they need it less than you think",
+          "eco_grade": "E",
+          "comparisons": {
+            "car_km": 157.1,
+            "tree_months": 18.2,
+            "pct_annual": 0.83
+          },
+          "category_percentile": 75,
+          "global_percentile": 59
+        },
+        "dress": {
+          "label": "Dress (polyester)",
+          "kg_co2": 22,
+          "tip": "Natural fibres biodegrade; synthetic fibres don't",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 104.8,
+            "tree_months": 12.1,
+            "pct_annual": 0.55
+          },
+          "category_percentile": 38,
+          "global_percentile": 45
+        },
+        "sneakers": {
+          "label": "Sneakers",
+          "kg_co2": 14,
+          "tip": "One pair of shoes = driving 60km",
+          "eco_grade": "C",
+          "comparisons": {
+            "car_km": 66.7,
+            "tree_months": 7.7,
+            "pct_annual": 0.35
+          },
+          "category_percentile": 25,
+          "global_percentile": 32
+        },
+        "leather_boots": {
+          "label": "Leather Boots",
+          "kg_co2": 27,
+          "tip": "Plant-based alternatives save ~50% emissions",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 128.6,
+            "tree_months": 14.9,
+            "pct_annual": 0.68
+          },
+          "category_percentile": 62,
+          "global_percentile": 52
+        },
+        "jacket_down": {
+          "label": "Down Jacket",
+          "kg_co2": 45,
+          "tip": "Buy second-hand \u2014 same warmth, 0 new emissions",
+          "eco_grade": "F",
+          "comparisons": {
+            "car_km": 214.3,
+            "tree_months": 24.8,
+            "pct_annual": 1.12
+          },
+          "category_percentile": 88,
+          "global_percentile": 64
+        },
+        "wool_sweater": {
+          "label": "Wool Sweater",
+          "kg_co2": 25,
+          "tip": "Wool is biodegradable and durable if cared for",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 119.0,
+            "tree_months": 13.8,
+            "pct_annual": 0.62
+          },
+          "category_percentile": 50,
+          "global_percentile": 48
+        },
+        "fast_fashion_item": {
+          "label": "Fast Fashion Item",
+          "kg_co2": 5,
+          "tip": "Worn only 7\u201310 times on average \u2014 buy less, buy better",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 23.8,
+            "tree_months": 2.8,
+            "pct_annual": 0.12
+          },
+          "category_percentile": 0,
+          "global_percentile": 16
+        }
+      }
+    },
+    "food": {
+      "label": "Food & Drink",
+      "icon": "\ud83e\udd69",
+      "default_kg_co2": 2,
+      "stats": {
+        "max_kg": 27,
+        "min_kg": 0.9,
+        "avg_kg": 9.92,
+        "item_count": 10
+      },
+      "items": {
+        "beef_1kg": {
+          "label": "Beef (1kg)",
+          "kg_co2": 27,
+          "tip": "Beef emits 20x more than tofu per kg",
+          "eco_grade": "F",
+          "comparisons": {
+            "car_km": 128.6,
+            "tree_months": 14.9,
+            "pct_annual": 0.68
+          },
+          "category_percentile": 90,
+          "global_percentile": 52
+        },
+        "chicken_1kg": {
+          "label": "Chicken (1kg)",
+          "kg_co2": 6.9,
+          "tip": "Choose free-range for better land use",
+          "eco_grade": "C",
+          "comparisons": {
+            "car_km": 32.9,
+            "tree_months": 3.8,
+            "pct_annual": 0.17
+          },
+          "category_percentile": 50,
+          "global_percentile": 20
+        },
+        "salmon_1kg": {
+          "label": "Salmon (1kg)",
+          "kg_co2": 6,
+          "tip": "Wild-caught is generally lower impact",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 28.6,
+            "tree_months": 3.3,
+            "pct_annual": 0.15
+          },
+          "category_percentile": 40,
+          "global_percentile": 18
+        },
+        "tofu_1kg": {
+          "label": "Tofu (1kg)",
+          "kg_co2": 3,
+          "tip": "Great protein source with fraction of beef's footprint",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 14.3,
+            "tree_months": 1.7,
+            "pct_annual": 0.07
+          },
+          "category_percentile": 20,
+          "global_percentile": 9
+        },
+        "milk_1l": {
+          "label": "Dairy Milk (1L)",
+          "kg_co2": 3.2,
+          "tip": "Oat milk uses 80% less land",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 15.2,
+            "tree_months": 1.8,
+            "pct_annual": 0.08
+          },
+          "category_percentile": 30,
+          "global_percentile": 11
+        },
+        "oat_milk_1l": {
+          "label": "Oat Milk (1L)",
+          "kg_co2": 0.9,
+          "tip": "Lowest carbon plant milk option",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 4.3,
+            "tree_months": 0.5,
+            "pct_annual": 0.02
+          },
+          "category_percentile": 0,
+          "global_percentile": 5
+        },
+        "cheese_1kg": {
+          "label": "Cheese (1kg)",
+          "kg_co2": 13.5,
+          "tip": "Cheese is surprisingly high \u2014 similar to pork",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 64.3,
+            "tree_months": 7.4,
+            "pct_annual": 0.34
+          },
+          "category_percentile": 60,
+          "global_percentile": 30
+        },
+        "eggs_12": {
+          "label": "Eggs (12)",
+          "kg_co2": 2.7,
+          "tip": "Free-range eggs have slightly higher footprint but better welfare",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 12.9,
+            "tree_months": 1.5,
+            "pct_annual": 0.07
+          },
+          "category_percentile": 10,
+          "global_percentile": 7
+        },
+        "coffee_1kg": {
+          "label": "Coffee Beans (1kg)",
+          "kg_co2": 17,
+          "tip": "Buy shade-grown to protect biodiversity",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 81.0,
+            "tree_months": 9.4,
+            "pct_annual": 0.43
+          },
+          "category_percentile": 70,
+          "global_percentile": 36
+        },
+        "chocolate_1kg": {
+          "label": "Dark Chocolate (1kg)",
+          "kg_co2": 19,
+          "tip": "Fairtrade chocolate funds reforestation",
+          "eco_grade": "E",
+          "comparisons": {
+            "car_km": 90.5,
+            "tree_months": 10.5,
+            "pct_annual": 0.47
+          },
+          "category_percentile": 80,
+          "global_percentile": 39
+        }
+      }
+    },
+    "transport": {
+      "label": "Transport",
+      "icon": "\u2708\ufe0f",
+      "default_kg_co2": 50,
+      "stats": {
+        "max_kg": 1620,
+        "min_kg": 0,
+        "avg_kg": 241.38,
+        "item_count": 8
+      },
+      "items": {
+        "flight_short": {
+          "label": "Short-Haul Flight (<3h)",
+          "kg_co2": 255,
+          "tip": "Take the train \u2014 up to 90% less CO\u2082",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 1214.3,
+            "tree_months": 140.6,
+            "pct_annual": 6.38
+          },
+          "category_percentile": 75,
+          "global_percentile": 86
+        },
+        "flight_long": {
+          "label": "Long-Haul Flight (10h)",
+          "kg_co2": 1620,
+          "tip": "One flight can = months of other lifestyle emissions",
+          "eco_grade": "F",
+          "comparisons": {
+            "car_km": 7714.3,
+            "tree_months": 893.0,
+            "pct_annual": 40.5
+          },
+          "category_percentile": 88,
+          "global_percentile": 98
+        },
+        "car_petrol_100km": {
+          "label": "Petrol Car (100km)",
+          "kg_co2": 21,
+          "tip": "EV on green energy = 0 tailpipe emissions",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 100.0,
+            "tree_months": 11.6,
+            "pct_annual": 0.53
+          },
+          "category_percentile": 62,
+          "global_percentile": 43
+        },
+        "car_electric_100km": {
+          "label": "Electric Car (100km)",
+          "kg_co2": 7,
+          "tip": "3x cleaner than petrol, even on avg grid",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 33.3,
+            "tree_months": 3.9,
+            "pct_annual": 0.18
+          },
+          "category_percentile": 25,
+          "global_percentile": 23
+        },
+        "train_100km": {
+          "label": "Train (100km)",
+          "kg_co2": 4,
+          "tip": "Best land transport option by far",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 19.0,
+            "tree_months": 2.2,
+            "pct_annual": 0.1
+          },
+          "category_percentile": 12,
+          "global_percentile": 14
+        },
+        "bus_100km": {
+          "label": "Bus (100km)",
+          "kg_co2": 8,
+          "tip": "Full buses rival trains for efficiency",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 38.1,
+            "tree_months": 4.4,
+            "pct_annual": 0.2
+          },
+          "category_percentile": 38,
+          "global_percentile": 27
+        },
+        "motorcycle_100km": {
+          "label": "Motorcycle (100km)",
+          "kg_co2": 16,
+          "tip": "More efficient than cars, less than you'd think",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 76.2,
+            "tree_months": 8.8,
+            "pct_annual": 0.4
+          },
+          "category_percentile": 50,
+          "global_percentile": 34
+        },
+        "bicycle_100km": {
+          "label": "Bicycle (100km)",
+          "kg_co2": 0,
+          "tip": "Zero direct emissions \u2014 the gold standard",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 0.0,
+            "tree_months": 0.0,
+            "pct_annual": 0.0
+          },
+          "category_percentile": 0,
+          "global_percentile": 0
+        }
+      }
+    },
+    "home": {
+      "label": "Home & Energy",
+      "icon": "\ud83c\udfe0",
+      "default_kg_co2": 100,
+      "stats": {
+        "max_kg": 320,
+        "min_kg": 0.5,
+        "avg_kg": 130.44,
+        "item_count": 8
+      },
+      "items": {
+        "electricity_kwh": {
+          "label": "Electricity (100 kWh)",
+          "kg_co2": 43,
+          "tip": "Switch to a renewable energy tariff",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 204.8,
+            "tree_months": 23.7,
+            "pct_annual": 1.07
+          },
+          "category_percentile": 25,
+          "global_percentile": 61
+        },
+        "natural_gas_kwh": {
+          "label": "Natural Gas (100 kWh)",
+          "kg_co2": 20,
+          "tip": "Heat pumps are 3-4x more efficient",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 95.2,
+            "tree_months": 11.0,
+            "pct_annual": 0.5
+          },
+          "category_percentile": 12,
+          "global_percentile": 41
+        },
+        "washing_machine": {
+          "label": "Washing Machine",
+          "kg_co2": 250,
+          "tip": "Wash cold \u2014 saves 80% of energy vs hot wash",
+          "eco_grade": "E",
+          "comparisons": {
+            "car_km": 1190.5,
+            "tree_months": 137.8,
+            "pct_annual": 6.25
+          },
+          "category_percentile": 75,
+          "global_percentile": 82
+        },
+        "fridge": {
+          "label": "Refrigerator",
+          "kg_co2": 320,
+          "tip": "A+ rated fridges use half the energy of older models",
+          "eco_grade": "F",
+          "comparisons": {
+            "car_km": 1523.8,
+            "tree_months": 176.4,
+            "pct_annual": 8.0
+          },
+          "category_percentile": 88,
+          "global_percentile": 91
+        },
+        "dishwasher": {
+          "label": "Dishwasher",
+          "kg_co2": 180,
+          "tip": "Full loads only \u2014 more efficient than hand washing",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 857.1,
+            "tree_months": 99.2,
+            "pct_annual": 4.5
+          },
+          "category_percentile": 50,
+          "global_percentile": 77
+        },
+        "mattress": {
+          "label": "Mattress",
+          "kg_co2": 50,
+          "tip": "Natural latex lasts longer and is biodegradable",
+          "eco_grade": "B",
+          "comparisons": {
+            "car_km": 238.1,
+            "tree_months": 27.6,
+            "pct_annual": 1.25
+          },
+          "category_percentile": 38,
+          "global_percentile": 66
+        },
+        "sofa": {
+          "label": "Sofa",
+          "kg_co2": 180,
+          "tip": "Second-hand furniture saves ~90% of manufacturing emissions",
+          "eco_grade": "D",
+          "comparisons": {
+            "car_km": 857.1,
+            "tree_months": 99.2,
+            "pct_annual": 4.5
+          },
+          "category_percentile": 50,
+          "global_percentile": 77
+        },
+        "led_bulb": {
+          "label": "LED Bulb",
+          "kg_co2": 0.5,
+          "tip": "LEDs use 90% less energy than incandescent",
+          "eco_grade": "A",
+          "comparisons": {
+            "car_km": 2.4,
+            "tree_months": 0.3,
+            "pct_annual": 0.01
+          },
+          "category_percentile": 0,
+          "global_percentile": 2
+        }
+      }
+    }
+  },
+  "summary": {
+    "total_products": 44,
+    "global_max_kg": 1620,
+    "global_min_kg": 0,
+    "global_avg_kg": 114.45,
+    "category_count": 5
+  }
+}

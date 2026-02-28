@@ -1,0 +1,86 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-02-28",
+  "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+  "categories": {
+    "electronics": {
+      "label": "Electronics",
+      "icon": "💻",
+      "default_kg_co2": 300,
+      "items": {
+        "smartphone": { "label": "Smartphone", "kg_co2": 70, "tip": "Keep your phone 1 extra year to cut impact by 30%" },
+        "laptop": { "label": "Laptop", "kg_co2": 300, "tip": "Refurbished laptops save ~200kg CO₂" },
+        "tablet": { "label": "Tablet", "kg_co2": 100, "tip": "Share devices when possible" },
+        "desktop": { "label": "Desktop PC", "kg_co2": 400, "tip": "Energy Star models use 65% less energy" },
+        "monitor": { "label": "Monitor", "kg_co2": 250, "tip": "LED monitors use 40% less power than LCD" },
+        "headphones": { "label": "Headphones", "kg_co2": 25, "tip": "Wired headphones last longer and use no batteries" },
+        "smartwatch": { "label": "Smartwatch", "kg_co2": 30, "tip": "Repair before replacing" },
+        "tv": { "label": "TV (55\")", "kg_co2": 400, "tip": "OLED TVs are more energy efficient" },
+        "gaming_console": { "label": "Gaming Console", "kg_co2": 89, "tip": "Use sleep mode instead of standby" },
+        "printer": { "label": "Printer", "kg_co2": 120, "tip": "Print double-sided and use recycled paper" }
+      }
+    },
+    "clothing": {
+      "label": "Clothing & Fashion",
+      "icon": "👕",
+      "default_kg_co2": 10,
+      "items": {
+        "tshirt_cotton": { "label": "Cotton T-Shirt", "kg_co2": 7, "tip": "Organic cotton uses 91% less water" },
+        "jeans": { "label": "Denim Jeans", "kg_co2": 33, "tip": "Wash jeans less — they need it less than you think" },
+        "dress": { "label": "Dress (polyester)", "kg_co2": 22, "tip": "Natural fibres biodegrade; synthetic fibres don't" },
+        "sneakers": { "label": "Sneakers", "kg_co2": 14, "tip": "One pair of shoes = driving 60km" },
+        "leather_boots": { "label": "Leather Boots", "kg_co2": 27, "tip": "Plant-based alternatives save ~50% emissions" },
+        "jacket_down": { "label": "Down Jacket", "kg_co2": 45, "tip": "Buy second-hand — same warmth, 0 new emissions" },
+        "wool_sweater": { "label": "Wool Sweater", "kg_co2": 25, "tip": "Wool is biodegradable and durable if cared for" },
+        "fast_fashion_item": { "label": "Fast Fashion Item", "kg_co2": 5, "tip": "Worn only 7–10 times on average — buy less, buy better" }
+      }
+    },
+    "food": {
+      "label": "Food & Drink",
+      "icon": "🥩",
+      "default_kg_co2": 2,
+      "items": {
+        "beef_1kg": { "label": "Beef (1kg)", "kg_co2": 27, "tip": "Beef emits 20x more than tofu per kg" },
+        "chicken_1kg": { "label": "Chicken (1kg)", "kg_co2": 6.9, "tip": "Choose free-range for better land use" },
+        "salmon_1kg": { "label": "Salmon (1kg)", "kg_co2": 6, "tip": "Wild-caught is generally lower impact" },
+        "tofu_1kg": { "label": "Tofu (1kg)", "kg_co2": 3, "tip": "Great protein source with fraction of beef's footprint" },
+        "milk_1l": { "label": "Dairy Milk (1L)", "kg_co2": 3.2, "tip": "Oat milk uses 80% less land" },
+        "oat_milk_1l": { "label": "Oat Milk (1L)", "kg_co2": 0.9, "tip": "Lowest carbon plant milk option" },
+        "cheese_1kg": { "label": "Cheese (1kg)", "kg_co2": 13.5, "tip": "Cheese is surprisingly high — similar to pork" },
+        "eggs_12": { "label": "Eggs (12)", "kg_co2": 2.7, "tip": "Free-range eggs have slightly higher footprint but better welfare" },
+        "coffee_1kg": { "label": "Coffee Beans (1kg)", "kg_co2": 17, "tip": "Buy shade-grown to protect biodiversity" },
+        "chocolate_1kg": { "label": "Dark Chocolate (1kg)", "kg_co2": 19, "tip": "Fairtrade chocolate funds reforestation" }
+      }
+    },
+    "transport": {
+      "label": "Transport",
+      "icon": "✈️",
+      "default_kg_co2": 50,
+      "items": {
+        "flight_short": { "label": "Short-Haul Flight (<3h)", "kg_co2": 255, "tip": "Take the train — up to 90% less CO₂" },
+        "flight_long": { "label": "Long-Haul Flight (10h)", "kg_co2": 1620, "tip": "One flight can = months of other lifestyle emissions" },
+        "car_petrol_100km": { "label": "Petrol Car (100km)", "kg_co2": 21, "tip": "EV on green energy = 0 tailpipe emissions" },
+        "car_electric_100km": { "label": "Electric Car (100km)", "kg_co2": 7, "tip": "3x cleaner than petrol, even on avg grid" },
+        "train_100km": { "label": "Train (100km)", "kg_co2": 4, "tip": "Best land transport option by far" },
+        "bus_100km": { "label": "Bus (100km)", "kg_co2": 8, "tip": "Full buses rival trains for efficiency" },
+        "motorcycle_100km": { "label": "Motorcycle (100km)", "kg_co2": 16, "tip": "More efficient than cars, less than you'd think" },
+        "bicycle_100km": { "label": "Bicycle (100km)", "kg_co2": 0, "tip": "Zero direct emissions — the gold standard" }
+      }
+    },
+    "home": {
+      "label": "Home & Energy",
+      "icon": "🏠",
+      "default_kg_co2": 100,
+      "items": {
+        "electricity_kwh": { "label": "Electricity (100 kWh)", "kg_co2": 43, "tip": "Switch to a renewable energy tariff" },
+        "natural_gas_kwh": { "label": "Natural Gas (100 kWh)", "kg_co2": 20, "tip": "Heat pumps are 3-4x more efficient" },
+        "washing_machine": { "label": "Washing Machine", "kg_co2": 250, "tip": "Wash cold — saves 80% of energy vs hot wash" },
+        "fridge": { "label": "Refrigerator", "kg_co2": 320, "tip": "A+ rated fridges use half the energy of older models" },
+        "dishwasher": { "label": "Dishwasher", "kg_co2": 180, "tip": "Full loads only — more efficient than hand washing" },
+        "mattress": { "label": "Mattress", "kg_co2": 50, "tip": "Natural latex lasts longer and is biodegradable" },
+        "sofa": { "label": "Sofa", "kg_co2": 180, "tip": "Second-hand furniture saves ~90% of manufacturing emissions" },
+        "led_bulb": { "label": "LED Bulb", "kg_co2": 0.5, "tip": "LEDs use 90% less energy than incandescent" }
+      }
+    }
+  }
+}

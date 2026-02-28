@@ -1,0 +1,1163 @@
+{
+  "generated_at": "2026-02-28T18:19:58.414036Z",
+  "schema_version": "1.0.0",
+  "overall_score": 100.0,
+  "total_items": 44,
+  "passed": 44,
+  "warnings": 1,
+  "failures": 0,
+  "categories": {
+    "electronics": {
+      "label": "Electronics",
+      "item_count": 10,
+      "avg_kg": 178.4,
+      "std_kg": 146.43,
+      "iqr_lower": -275.0,
+      "iqr_upper": 645.0,
+      "items": {
+        "smartphone": {
+          "label": "Smartphone",
+          "kg_co2": 70,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "laptop": {
+          "label": "Laptop",
+          "kg_co2": 300,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "tablet": {
+          "label": "Tablet",
+          "kg_co2": 100,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "desktop": {
+          "label": "Desktop PC",
+          "kg_co2": 400,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "monitor": {
+          "label": "Monitor",
+          "kg_co2": 250,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "headphones": {
+          "label": "Headphones",
+          "kg_co2": 25,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "smartwatch": {
+          "label": "Smartwatch",
+          "kg_co2": 30,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "tv": {
+          "label": "TV (55\")",
+          "kg_co2": 400,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "gaming_console": {
+          "label": "Gaming Console",
+          "kg_co2": 89,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "printer": {
+          "label": "Printer",
+          "kg_co2": 120,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        }
+      }
+    },
+    "clothing": {
+      "label": "Clothing & Fashion",
+      "item_count": 8,
+      "avg_kg": 22.25,
+      "std_kg": 13.42,
+      "iqr_lower": -14.5,
+      "iqr_upper": 61.5,
+      "items": {
+        "tshirt_cotton": {
+          "label": "Cotton T-Shirt",
+          "kg_co2": 7,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "jeans": {
+          "label": "Denim Jeans",
+          "kg_co2": 33,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "dress": {
+          "label": "Dress (polyester)",
+          "kg_co2": 22,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "sneakers": {
+          "label": "Sneakers",
+          "kg_co2": 14,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "leather_boots": {
+          "label": "Leather Boots",
+          "kg_co2": 27,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "jacket_down": {
+          "label": "Down Jacket",
+          "kg_co2": 45,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "wool_sweater": {
+          "label": "Wool Sweater",
+          "kg_co2": 25,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "fast_fashion_item": {
+          "label": "Fast Fashion Item",
+          "kg_co2": 5,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        }
+      }
+    },
+    "food": {
+      "label": "Food & Drink",
+      "item_count": 10,
+      "avg_kg": 9.92,
+      "std_kg": 8.74,
+      "iqr_lower": -18.0,
+      "iqr_upper": 38.0,
+      "items": {
+        "beef_1kg": {
+          "label": "Beef (1kg)",
+          "kg_co2": 27,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "chicken_1kg": {
+          "label": "Chicken (1kg)",
+          "kg_co2": 6.9,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "salmon_1kg": {
+          "label": "Salmon (1kg)",
+          "kg_co2": 6,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "tofu_1kg": {
+          "label": "Tofu (1kg)",
+          "kg_co2": 3,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "milk_1l": {
+          "label": "Dairy Milk (1L)",
+          "kg_co2": 3.2,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "oat_milk_1l": {
+          "label": "Oat Milk (1L)",
+          "kg_co2": 0.9,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "cheese_1kg": {
+          "label": "Cheese (1kg)",
+          "kg_co2": 13.5,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "eggs_12": {
+          "label": "Eggs (12)",
+          "kg_co2": 2.7,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "coffee_1kg": {
+          "label": "Coffee Beans (1kg)",
+          "kg_co2": 17,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "chocolate_1kg": {
+          "label": "Dark Chocolate (1kg)",
+          "kg_co2": 19,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        }
+      }
+    },
+    "transport": {
+      "label": "Transport",
+      "item_count": 8,
+      "avg_kg": 241.38,
+      "std_kg": 563.68,
+      "iqr_lower": -365.0,
+      "iqr_upper": 627.0,
+      "items": {
+        "flight_short": {
+          "label": "Short-Haul Flight (<3h)",
+          "kg_co2": 255,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "flight_long": {
+          "label": "Long-Haul Flight (10h)",
+          "kg_co2": 1620,
+          "score": 90,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "WARN",
+              "msg": "Outlier: 1620 kg > upper fence 627.0 kg"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "car_petrol_100km": {
+          "label": "Petrol Car (100km)",
+          "kg_co2": 21,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "car_electric_100km": {
+          "label": "Electric Car (100km)",
+          "kg_co2": 7,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "train_100km": {
+          "label": "Train (100km)",
+          "kg_co2": 4,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "bus_100km": {
+          "label": "Bus (100km)",
+          "kg_co2": 8,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "motorcycle_100km": {
+          "label": "Motorcycle (100km)",
+          "kg_co2": 16,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "bicycle_100km": {
+          "label": "Bicycle (100km)",
+          "kg_co2": 0,
+          "score": 70,
+          "status": "PASS",
+          "confidence": "medium",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "FAIL",
+              "msg": "kg_co2 must be positive"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        }
+      }
+    },
+    "home": {
+      "label": "Home & Energy",
+      "item_count": 8,
+      "avg_kg": 130.44,
+      "std_kg": 118.53,
+      "iqr_lower": -267.5,
+      "iqr_upper": 560.5,
+      "items": {
+        "electricity_kwh": {
+          "label": "Electricity (100 kWh)",
+          "kg_co2": 43,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "natural_gas_kwh": {
+          "label": "Natural Gas (100 kWh)",
+          "kg_co2": 20,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "washing_machine": {
+          "label": "Washing Machine",
+          "kg_co2": 250,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "fridge": {
+          "label": "Refrigerator",
+          "kg_co2": 320,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "dishwasher": {
+          "label": "Dishwasher",
+          "kg_co2": 180,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "mattress": {
+          "label": "Mattress",
+          "kg_co2": 50,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "sofa": {
+          "label": "Sofa",
+          "kg_co2": 180,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        },
+        "led_bulb": {
+          "label": "LED Bulb",
+          "kg_co2": 0.5,
+          "score": 100,
+          "status": "PASS",
+          "confidence": "high",
+          "checks": [
+            {
+              "level": "PASS",
+              "msg": "All required fields present"
+            },
+            {
+              "level": "PASS",
+              "msg": "CO\u2082 value in valid range"
+            },
+            {
+              "level": "PASS",
+              "msg": "Value within IQR bounds"
+            },
+            {
+              "level": "PASS",
+              "msg": "Tip meets length requirement"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "overall_status": "PASS",
+  "issues_summary": []
+}

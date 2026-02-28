@@ -1,0 +1,25 @@
+{
+  "date": "2026-02-28",
+  "schema_version": "1.0.0",
+  "pipeline_version": "2.0.0",
+  "total_products": 44,
+  "category_count": 5,
+  "global_avg_kg": 114.45,
+  "global_max_kg": 1620,
+  "global_min_kg": 0,
+  "category_avgs": {
+    "electronics": 178.4,
+    "clothing": 22.25,
+    "food": 9.92,
+    "transport": 241.38,
+    "home": 130.44
+  },
+  "grade_distribution": {
+    "A": 12,
+    "B": 11,
+    "C": 3,
+    "D": 8,
+    "E": 4,
+    "F": 6
+  }
+}

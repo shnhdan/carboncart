@@ -1,7 +1,8 @@
 {
   "meta": {
-    "pipeline_version": "1.1.0",
-    "avg_person_annual_kg": 4000
+    "pipeline_version": "2.0.0",
+    "avg_person_annual_kg": 4000,
+    "generated_at": "2026-02-28T18:33:03.654863Z"
   },
   "version": "1.0.0",
   "last_updated": "2026-02-28",
@@ -29,7 +30,13 @@
             "pct_annual": 1.75
           },
           "category_percentile": 20,
-          "global_percentile": 68
+          "global_percentile": 68,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654888Z",
+            "confidence": "high"
+          }
         },
         "laptop": {
           "label": "Laptop",
@@ -42,7 +49,13 @@
             "pct_annual": 7.5
           },
           "category_percentile": 70,
-          "global_percentile": 89
+          "global_percentile": 89,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654898Z",
+            "confidence": "high"
+          }
         },
         "tablet": {
           "label": "Tablet",
@@ -55,7 +68,13 @@
             "pct_annual": 2.5
           },
           "category_percentile": 40,
-          "global_percentile": 73
+          "global_percentile": 73,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654906Z",
+            "confidence": "high"
+          }
         },
         "desktop": {
           "label": "Desktop PC",
@@ -68,7 +87,13 @@
             "pct_annual": 10.0
           },
           "category_percentile": 80,
-          "global_percentile": 93
+          "global_percentile": 93,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654945Z",
+            "confidence": "high"
+          }
         },
         "monitor": {
           "label": "Monitor",
@@ -81,7 +106,13 @@
             "pct_annual": 6.25
           },
           "category_percentile": 60,
-          "global_percentile": 82
+          "global_percentile": 82,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654960Z",
+            "confidence": "high"
+          }
         },
         "headphones": {
           "label": "Headphones",
@@ -94,7 +125,13 @@
             "pct_annual": 0.62
           },
           "category_percentile": 0,
-          "global_percentile": 48
+          "global_percentile": 48,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654973Z",
+            "confidence": "high"
+          }
         },
         "smartwatch": {
           "label": "Smartwatch",
@@ -107,7 +144,13 @@
             "pct_annual": 0.75
           },
           "category_percentile": 10,
-          "global_percentile": 57
+          "global_percentile": 57,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.654991Z",
+            "confidence": "high"
+          }
         },
         "tv": {
           "label": "TV (55\")",
@@ -120,7 +163,13 @@
             "pct_annual": 10.0
           },
           "category_percentile": 80,
-          "global_percentile": 93
+          "global_percentile": 93,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655008Z",
+            "confidence": "high"
+          }
         },
         "gaming_console": {
           "label": "Gaming Console",
@@ -133,7 +182,13 @@
             "pct_annual": 2.23
           },
           "category_percentile": 30,
-          "global_percentile": 70
+          "global_percentile": 70,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655022Z",
+            "confidence": "high"
+          }
         },
         "printer": {
           "label": "Printer",
@@ -146,7 +201,13 @@
             "pct_annual": 3.0
           },
           "category_percentile": 50,
-          "global_percentile": 75
+          "global_percentile": 75,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655033Z",
+            "confidence": "high"
+          }
         }
       }
     },
@@ -172,7 +233,13 @@
             "pct_annual": 0.18
           },
           "category_percentile": 12,
-          "global_percentile": 23
+          "global_percentile": 23,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655100Z",
+            "confidence": "high"
+          }
         },
         "jeans": {
           "label": "Denim Jeans",
@@ -185,7 +252,13 @@
             "pct_annual": 0.83
           },
           "category_percentile": 75,
-          "global_percentile": 59
+          "global_percentile": 59,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655120Z",
+            "confidence": "high"
+          }
         },
         "dress": {
           "label": "Dress (polyester)",
@@ -198,7 +271,13 @@
             "pct_annual": 0.55
           },
           "category_percentile": 38,
-          "global_percentile": 45
+          "global_percentile": 45,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655131Z",
+            "confidence": "high"
+          }
         },
         "sneakers": {
           "label": "Sneakers",
@@ -211,7 +290,13 @@
             "pct_annual": 0.35
           },
           "category_percentile": 25,
-          "global_percentile": 32
+          "global_percentile": 32,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655141Z",
+            "confidence": "high"
+          }
         },
         "leather_boots": {
           "label": "Leather Boots",
@@ -224,7 +309,13 @@
             "pct_annual": 0.68
           },
           "category_percentile": 62,
-          "global_percentile": 52
+          "global_percentile": 52,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655151Z",
+            "confidence": "high"
+          }
         },
         "jacket_down": {
           "label": "Down Jacket",
@@ -237,7 +328,13 @@
             "pct_annual": 1.12
           },
           "category_percentile": 88,
-          "global_percentile": 64
+          "global_percentile": 64,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655162Z",
+            "confidence": "high"
+          }
         },
         "wool_sweater": {
           "label": "Wool Sweater",
@@ -250,7 +347,13 @@
             "pct_annual": 0.62
           },
           "category_percentile": 50,
-          "global_percentile": 48
+          "global_percentile": 48,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655175Z",
+            "confidence": "high"
+          }
         },
         "fast_fashion_item": {
           "label": "Fast Fashion Item",
@@ -263,7 +366,13 @@
             "pct_annual": 0.12
           },
           "category_percentile": 0,
-          "global_percentile": 16
+          "global_percentile": 16,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655189Z",
+            "confidence": "high"
+          }
         }
       }
     },
@@ -289,7 +398,13 @@
             "pct_annual": 0.68
           },
           "category_percentile": 90,
-          "global_percentile": 52
+          "global_percentile": 52,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655242Z",
+            "confidence": "high"
+          }
         },
         "chicken_1kg": {
           "label": "Chicken (1kg)",
@@ -302,7 +417,13 @@
             "pct_annual": 0.17
           },
           "category_percentile": 50,
-          "global_percentile": 20
+          "global_percentile": 20,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655257Z",
+            "confidence": "high"
+          }
         },
         "salmon_1kg": {
           "label": "Salmon (1kg)",
@@ -315,7 +436,13 @@
             "pct_annual": 0.15
           },
           "category_percentile": 40,
-          "global_percentile": 18
+          "global_percentile": 18,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655268Z",
+            "confidence": "high"
+          }
         },
         "tofu_1kg": {
           "label": "Tofu (1kg)",
@@ -328,7 +455,13 @@
             "pct_annual": 0.07
           },
           "category_percentile": 20,
-          "global_percentile": 9
+          "global_percentile": 9,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655278Z",
+            "confidence": "high"
+          }
         },
         "milk_1l": {
           "label": "Dairy Milk (1L)",
@@ -341,7 +474,13 @@
             "pct_annual": 0.08
           },
           "category_percentile": 30,
-          "global_percentile": 11
+          "global_percentile": 11,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655290Z",
+            "confidence": "high"
+          }
         },
         "oat_milk_1l": {
           "label": "Oat Milk (1L)",
@@ -354,7 +493,13 @@
             "pct_annual": 0.02
           },
           "category_percentile": 0,
-          "global_percentile": 5
+          "global_percentile": 5,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655302Z",
+            "confidence": "high"
+          }
         },
         "cheese_1kg": {
           "label": "Cheese (1kg)",
@@ -367,7 +512,13 @@
             "pct_annual": 0.34
           },
           "category_percentile": 60,
-          "global_percentile": 30
+          "global_percentile": 30,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655314Z",
+            "confidence": "high"
+          }
         },
         "eggs_12": {
           "label": "Eggs (12)",
@@ -380,7 +531,13 @@
             "pct_annual": 0.07
           },
           "category_percentile": 10,
-          "global_percentile": 7
+          "global_percentile": 7,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655331Z",
+            "confidence": "high"
+          }
         },
         "coffee_1kg": {
           "label": "Coffee Beans (1kg)",
@@ -393,7 +550,13 @@
             "pct_annual": 0.43
           },
           "category_percentile": 70,
-          "global_percentile": 36
+          "global_percentile": 36,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655346Z",
+            "confidence": "high"
+          }
         },
         "chocolate_1kg": {
           "label": "Dark Chocolate (1kg)",
@@ -406,7 +569,13 @@
             "pct_annual": 0.47
           },
           "category_percentile": 80,
-          "global_percentile": 39
+          "global_percentile": 39,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655357Z",
+            "confidence": "high"
+          }
         }
       }
     },
@@ -432,7 +601,13 @@
             "pct_annual": 6.38
           },
           "category_percentile": 75,
-          "global_percentile": 86
+          "global_percentile": 86,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655379Z",
+            "confidence": "high"
+          }
         },
         "flight_long": {
           "label": "Long-Haul Flight (10h)",
@@ -445,7 +620,13 @@
             "pct_annual": 40.5
           },
           "category_percentile": 88,
-          "global_percentile": 98
+          "global_percentile": 98,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655390Z",
+            "confidence": "high"
+          }
         },
         "car_petrol_100km": {
           "label": "Petrol Car (100km)",
@@ -458,7 +639,13 @@
             "pct_annual": 0.53
           },
           "category_percentile": 62,
-          "global_percentile": 43
+          "global_percentile": 43,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655401Z",
+            "confidence": "high"
+          }
         },
         "car_electric_100km": {
           "label": "Electric Car (100km)",
@@ -471,7 +658,13 @@
             "pct_annual": 0.18
           },
           "category_percentile": 25,
-          "global_percentile": 23
+          "global_percentile": 23,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655412Z",
+            "confidence": "high"
+          }
         },
         "train_100km": {
           "label": "Train (100km)",
@@ -484,7 +677,13 @@
             "pct_annual": 0.1
           },
           "category_percentile": 12,
-          "global_percentile": 14
+          "global_percentile": 14,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655421Z",
+            "confidence": "high"
+          }
         },
         "bus_100km": {
           "label": "Bus (100km)",
@@ -497,7 +696,13 @@
             "pct_annual": 0.2
           },
           "category_percentile": 38,
-          "global_percentile": 27
+          "global_percentile": 27,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655434Z",
+            "confidence": "high"
+          }
         },
         "motorcycle_100km": {
           "label": "Motorcycle (100km)",
@@ -510,7 +715,13 @@
             "pct_annual": 0.4
           },
           "category_percentile": 50,
-          "global_percentile": 34
+          "global_percentile": 34,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655445Z",
+            "confidence": "high"
+          }
         },
         "bicycle_100km": {
           "label": "Bicycle (100km)",
@@ -523,7 +734,13 @@
             "pct_annual": 0.0
           },
           "category_percentile": 0,
-          "global_percentile": 0
+          "global_percentile": 0,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655455Z",
+            "confidence": "medium"
+          }
         }
       }
     },
@@ -549,7 +766,13 @@
             "pct_annual": 1.07
           },
           "category_percentile": 25,
-          "global_percentile": 61
+          "global_percentile": 61,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655473Z",
+            "confidence": "high"
+          }
         },
         "natural_gas_kwh": {
           "label": "Natural Gas (100 kWh)",
@@ -562,7 +785,13 @@
             "pct_annual": 0.5
           },
           "category_percentile": 12,
-          "global_percentile": 41
+          "global_percentile": 41,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655484Z",
+            "confidence": "high"
+          }
         },
         "washing_machine": {
           "label": "Washing Machine",
@@ -575,7 +804,13 @@
             "pct_annual": 6.25
           },
           "category_percentile": 75,
-          "global_percentile": 82
+          "global_percentile": 82,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655498Z",
+            "confidence": "high"
+          }
         },
         "fridge": {
           "label": "Refrigerator",
@@ -588,7 +823,13 @@
             "pct_annual": 8.0
           },
           "category_percentile": 88,
-          "global_percentile": 91
+          "global_percentile": 91,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655511Z",
+            "confidence": "high"
+          }
         },
         "dishwasher": {
           "label": "Dishwasher",
@@ -601,7 +842,13 @@
             "pct_annual": 4.5
           },
           "category_percentile": 50,
-          "global_percentile": 77
+          "global_percentile": 77,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655521Z",
+            "confidence": "high"
+          }
         },
         "mattress": {
           "label": "Mattress",
@@ -614,7 +861,13 @@
             "pct_annual": 1.25
           },
           "category_percentile": 38,
-          "global_percentile": 66
+          "global_percentile": 66,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655531Z",
+            "confidence": "high"
+          }
         },
         "sofa": {
           "label": "Sofa",
@@ -627,7 +880,13 @@
             "pct_annual": 4.5
           },
           "category_percentile": 50,
-          "global_percentile": 77
+          "global_percentile": 77,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655541Z",
+            "confidence": "high"
+          }
         },
         "led_bulb": {
           "label": "LED Bulb",
@@ -640,7 +899,13 @@
             "pct_annual": 0.01
           },
           "category_percentile": 0,
-          "global_percentile": 2
+          "global_percentile": 2,
+          "lineage": {
+            "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
+            "pipeline_version": "2.0.0",
+            "generated_at": "2026-02-28T18:33:03.655552Z",
+            "confidence": "medium"
+          }
         }
       }
     }

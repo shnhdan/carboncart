@@ -1,0 +1,835 @@
+{
+  "generated_at": "2026-02-28T18:19:58.830638Z",
+  "category_matrix": {
+    "electronics": {
+      "label": "Electronics",
+      "icon": "\ud83d\udcbb",
+      "avg_kg": 178.4,
+      "max_kg": 400,
+      "min_kg": 25,
+      "item_count": 10
+    },
+    "clothing": {
+      "label": "Clothing & Fashion",
+      "icon": "\ud83d\udc55",
+      "avg_kg": 22.25,
+      "max_kg": 45,
+      "min_kg": 5,
+      "item_count": 8
+    },
+    "food": {
+      "label": "Food & Drink",
+      "icon": "\ud83e\udd69",
+      "avg_kg": 9.92,
+      "max_kg": 27,
+      "min_kg": 0.9,
+      "item_count": 10
+    },
+    "transport": {
+      "label": "Transport",
+      "icon": "\u2708\ufe0f",
+      "avg_kg": 241.38,
+      "max_kg": 1620,
+      "min_kg": 0,
+      "item_count": 8
+    },
+    "home": {
+      "label": "Home & Energy",
+      "icon": "\ud83c\udfe0",
+      "avg_kg": 130.44,
+      "max_kg": 320,
+      "min_kg": 0.5,
+      "item_count": 8
+    }
+  },
+  "cross_category_ratios": [
+    {
+      "higher": "transport",
+      "lower": "food",
+      "ratio": 25.0,
+      "label": "Transport avg is 25.0\u00d7 higher than Food & Drink"
+    },
+    {
+      "higher": "electronics",
+      "lower": "food",
+      "ratio": 17.98,
+      "label": "Electronics avg is 17.98\u00d7 higher than Food & Drink"
+    },
+    {
+      "higher": "home",
+      "lower": "food",
+      "ratio": 12.5,
+      "label": "Home & Energy avg is 12.5\u00d7 higher than Food & Drink"
+    },
+    {
+      "higher": "transport",
+      "lower": "clothing",
+      "ratio": 11.11,
+      "label": "Transport avg is 11.11\u00d7 higher than Clothing & Fashion"
+    },
+    {
+      "higher": "electronics",
+      "lower": "clothing",
+      "ratio": 8.02,
+      "label": "Electronics avg is 8.02\u00d7 higher than Clothing & Fashion"
+    },
+    {
+      "higher": "home",
+      "lower": "clothing",
+      "ratio": 5.88,
+      "label": "Home & Energy avg is 5.88\u00d7 higher than Clothing & Fashion"
+    },
+    {
+      "higher": "clothing",
+      "lower": "food",
+      "ratio": 2.24,
+      "label": "Clothing & Fashion avg is 2.24\u00d7 higher than Food & Drink"
+    },
+    {
+      "higher": "transport",
+      "lower": "home",
+      "ratio": 1.85,
+      "label": "Transport avg is 1.85\u00d7 higher than Home & Energy"
+    }
+  ],
+  "worst_by_category": {
+    "electronics": [
+      {
+        "key": "desktop",
+        "label": "Desktop PC",
+        "kg_co2": 400,
+        "eco_grade": "F",
+        "tip": "Energy Star models use 65% less energy"
+      },
+      {
+        "key": "tv",
+        "label": "TV (55\")",
+        "kg_co2": 400,
+        "eco_grade": "F",
+        "tip": "OLED TVs are more energy efficient"
+      },
+      {
+        "key": "laptop",
+        "label": "Laptop",
+        "kg_co2": 300,
+        "eco_grade": "E",
+        "tip": "Refurbished laptops save ~200kg CO\u2082"
+      },
+      {
+        "key": "monitor",
+        "label": "Monitor",
+        "kg_co2": 250,
+        "eco_grade": "D",
+        "tip": "LED monitors use 40% less power than LCD"
+      },
+      {
+        "key": "printer",
+        "label": "Printer",
+        "kg_co2": 120,
+        "eco_grade": "C",
+        "tip": "Print double-sided and use recycled paper"
+      }
+    ],
+    "clothing": [
+      {
+        "key": "jacket_down",
+        "label": "Down Jacket",
+        "kg_co2": 45,
+        "eco_grade": "F",
+        "tip": "Buy second-hand \u2014 same warmth, 0 new emissions"
+      },
+      {
+        "key": "jeans",
+        "label": "Denim Jeans",
+        "kg_co2": 33,
+        "eco_grade": "E",
+        "tip": "Wash jeans less \u2014 they need it less than you think"
+      },
+      {
+        "key": "leather_boots",
+        "label": "Leather Boots",
+        "kg_co2": 27,
+        "eco_grade": "D",
+        "tip": "Plant-based alternatives save ~50% emissions"
+      },
+      {
+        "key": "wool_sweater",
+        "label": "Wool Sweater",
+        "kg_co2": 25,
+        "eco_grade": "D",
+        "tip": "Wool is biodegradable and durable if cared for"
+      },
+      {
+        "key": "dress",
+        "label": "Dress (polyester)",
+        "kg_co2": 22,
+        "eco_grade": "D",
+        "tip": "Natural fibres biodegrade; synthetic fibres don't"
+      }
+    ],
+    "food": [
+      {
+        "key": "beef_1kg",
+        "label": "Beef (1kg)",
+        "kg_co2": 27,
+        "eco_grade": "F",
+        "tip": "Beef emits 20x more than tofu per kg"
+      },
+      {
+        "key": "chocolate_1kg",
+        "label": "Dark Chocolate (1kg)",
+        "kg_co2": 19,
+        "eco_grade": "E",
+        "tip": "Fairtrade chocolate funds reforestation"
+      },
+      {
+        "key": "coffee_1kg",
+        "label": "Coffee Beans (1kg)",
+        "kg_co2": 17,
+        "eco_grade": "D",
+        "tip": "Buy shade-grown to protect biodiversity"
+      },
+      {
+        "key": "cheese_1kg",
+        "label": "Cheese (1kg)",
+        "kg_co2": 13.5,
+        "eco_grade": "D",
+        "tip": "Cheese is surprisingly high \u2014 similar to pork"
+      },
+      {
+        "key": "chicken_1kg",
+        "label": "Chicken (1kg)",
+        "kg_co2": 6.9,
+        "eco_grade": "C",
+        "tip": "Choose free-range for better land use"
+      }
+    ],
+    "transport": [
+      {
+        "key": "flight_long",
+        "label": "Long-Haul Flight (10h)",
+        "kg_co2": 1620,
+        "eco_grade": "F",
+        "tip": "One flight can = months of other lifestyle emissions"
+      },
+      {
+        "key": "flight_short",
+        "label": "Short-Haul Flight (<3h)",
+        "kg_co2": 255,
+        "eco_grade": "B",
+        "tip": "Take the train \u2014 up to 90% less CO\u2082"
+      },
+      {
+        "key": "car_petrol_100km",
+        "label": "Petrol Car (100km)",
+        "kg_co2": 21,
+        "eco_grade": "A",
+        "tip": "EV on green energy = 0 tailpipe emissions"
+      },
+      {
+        "key": "motorcycle_100km",
+        "label": "Motorcycle (100km)",
+        "kg_co2": 16,
+        "eco_grade": "A",
+        "tip": "More efficient than cars, less than you'd think"
+      },
+      {
+        "key": "bus_100km",
+        "label": "Bus (100km)",
+        "kg_co2": 8,
+        "eco_grade": "A",
+        "tip": "Full buses rival trains for efficiency"
+      }
+    ],
+    "home": [
+      {
+        "key": "fridge",
+        "label": "Refrigerator",
+        "kg_co2": 320,
+        "eco_grade": "F",
+        "tip": "A+ rated fridges use half the energy of older models"
+      },
+      {
+        "key": "washing_machine",
+        "label": "Washing Machine",
+        "kg_co2": 250,
+        "eco_grade": "E",
+        "tip": "Wash cold \u2014 saves 80% of energy vs hot wash"
+      },
+      {
+        "key": "dishwasher",
+        "label": "Dishwasher",
+        "kg_co2": 180,
+        "eco_grade": "D",
+        "tip": "Full loads only \u2014 more efficient than hand washing"
+      },
+      {
+        "key": "sofa",
+        "label": "Sofa",
+        "kg_co2": 180,
+        "eco_grade": "D",
+        "tip": "Second-hand furniture saves ~90% of manufacturing emissions"
+      },
+      {
+        "key": "mattress",
+        "label": "Mattress",
+        "kg_co2": 50,
+        "eco_grade": "B",
+        "tip": "Natural latex lasts longer and is biodegradable"
+      }
+    ]
+  },
+  "leaderboard": {
+    "greenest": [
+      {
+        "id": "transport/bicycle_100km",
+        "label": "Bicycle (100km)",
+        "category": "Transport",
+        "category_key": "transport",
+        "kg_co2": 0,
+        "eco_grade": "A"
+      },
+      {
+        "id": "home/led_bulb",
+        "label": "LED Bulb",
+        "category": "Home & Energy",
+        "category_key": "home",
+        "kg_co2": 0.5,
+        "eco_grade": "A"
+      },
+      {
+        "id": "food/oat_milk_1l",
+        "label": "Oat Milk (1L)",
+        "category": "Food & Drink",
+        "category_key": "food",
+        "kg_co2": 0.9,
+        "eco_grade": "A"
+      },
+      {
+        "id": "food/eggs_12",
+        "label": "Eggs (12)",
+        "category": "Food & Drink",
+        "category_key": "food",
+        "kg_co2": 2.7,
+        "eco_grade": "A"
+      },
+      {
+        "id": "food/tofu_1kg",
+        "label": "Tofu (1kg)",
+        "category": "Food & Drink",
+        "category_key": "food",
+        "kg_co2": 3,
+        "eco_grade": "B"
+      },
+      {
+        "id": "food/milk_1l",
+        "label": "Dairy Milk (1L)",
+        "category": "Food & Drink",
+        "category_key": "food",
+        "kg_co2": 3.2,
+        "eco_grade": "B"
+      },
+      {
+        "id": "transport/train_100km",
+        "label": "Train (100km)",
+        "category": "Transport",
+        "category_key": "transport",
+        "kg_co2": 4,
+        "eco_grade": "A"
+      },
+      {
+        "id": "clothing/fast_fashion_item",
+        "label": "Fast Fashion Item",
+        "category": "Clothing & Fashion",
+        "category_key": "clothing",
+        "kg_co2": 5,
+        "eco_grade": "B"
+      },
+      {
+        "id": "food/salmon_1kg",
+        "label": "Salmon (1kg)",
+        "category": "Food & Drink",
+        "category_key": "food",
+        "kg_co2": 6,
+        "eco_grade": "B"
+      },
+      {
+        "id": "food/chicken_1kg",
+        "label": "Chicken (1kg)",
+        "category": "Food & Drink",
+        "category_key": "food",
+        "kg_co2": 6.9,
+        "eco_grade": "C"
+      }
+    ],
+    "worst": [
+      {
+        "id": "transport/flight_long",
+        "label": "Long-Haul Flight (10h)",
+        "category": "Transport",
+        "category_key": "transport",
+        "kg_co2": 1620,
+        "eco_grade": "F"
+      },
+      {
+        "id": "electronics/tv",
+        "label": "TV (55\")",
+        "category": "Electronics",
+        "category_key": "electronics",
+        "kg_co2": 400,
+        "eco_grade": "F"
+      },
+      {
+        "id": "electronics/desktop",
+        "label": "Desktop PC",
+        "category": "Electronics",
+        "category_key": "electronics",
+        "kg_co2": 400,
+        "eco_grade": "F"
+      },
+      {
+        "id": "home/fridge",
+        "label": "Refrigerator",
+        "category": "Home & Energy",
+        "category_key": "home",
+        "kg_co2": 320,
+        "eco_grade": "F"
+      },
+      {
+        "id": "electronics/laptop",
+        "label": "Laptop",
+        "category": "Electronics",
+        "category_key": "electronics",
+        "kg_co2": 300,
+        "eco_grade": "E"
+      },
+      {
+        "id": "transport/flight_short",
+        "label": "Short-Haul Flight (<3h)",
+        "category": "Transport",
+        "category_key": "transport",
+        "kg_co2": 255,
+        "eco_grade": "B"
+      },
+      {
+        "id": "home/washing_machine",
+        "label": "Washing Machine",
+        "category": "Home & Energy",
+        "category_key": "home",
+        "kg_co2": 250,
+        "eco_grade": "E"
+      },
+      {
+        "id": "electronics/monitor",
+        "label": "Monitor",
+        "category": "Electronics",
+        "category_key": "electronics",
+        "kg_co2": 250,
+        "eco_grade": "D"
+      },
+      {
+        "id": "home/sofa",
+        "label": "Sofa",
+        "category": "Home & Energy",
+        "category_key": "home",
+        "kg_co2": 180,
+        "eco_grade": "D"
+      },
+      {
+        "id": "home/dishwasher",
+        "label": "Dishwasher",
+        "category": "Home & Energy",
+        "category_key": "home",
+        "kg_co2": 180,
+        "eco_grade": "D"
+      }
+    ]
+  },
+  "substitutions": [
+    {
+      "category": "Transport",
+      "from_label": "Long-Haul Flight (10h)",
+      "from_kg": 1620,
+      "to_label": "Bicycle (100km)",
+      "to_kg": 0,
+      "saving_kg": 1620,
+      "saving_pct": 100.0,
+      "tip": "Zero direct emissions \u2014 the gold standard"
+    },
+    {
+      "category": "Electronics",
+      "from_label": "Desktop PC",
+      "from_kg": 400,
+      "to_label": "Headphones",
+      "to_kg": 25,
+      "saving_kg": 375,
+      "saving_pct": 93.8,
+      "tip": "Wired headphones last longer and use no batteries"
+    },
+    {
+      "category": "Home & Energy",
+      "from_label": "Refrigerator",
+      "from_kg": 320,
+      "to_label": "LED Bulb",
+      "to_kg": 0.5,
+      "saving_kg": 319.5,
+      "saving_pct": 99.8,
+      "tip": "LEDs use 90% less energy than incandescent"
+    },
+    {
+      "category": "Clothing & Fashion",
+      "from_label": "Down Jacket",
+      "from_kg": 45,
+      "to_label": "Fast Fashion Item",
+      "to_kg": 5,
+      "saving_kg": 40,
+      "saving_pct": 88.9,
+      "tip": "Worn only 7\u201310 times on average \u2014 buy less, buy better"
+    },
+    {
+      "category": "Food & Drink",
+      "from_label": "Beef (1kg)",
+      "from_kg": 27,
+      "to_label": "Oat Milk (1L)",
+      "to_kg": 0.9,
+      "saving_kg": 26.1,
+      "saving_pct": 96.7,
+      "tip": "Lowest carbon plant milk option"
+    }
+  ],
+  "grade_distribution": {
+    "A": {
+      "count": 12,
+      "items": [
+        {
+          "id": "electronics/headphones",
+          "label": "Headphones",
+          "category": "Electronics",
+          "kg_co2": 25
+        },
+        {
+          "id": "electronics/smartwatch",
+          "label": "Smartwatch",
+          "category": "Electronics",
+          "kg_co2": 30
+        },
+        {
+          "id": "food/oat_milk_1l",
+          "label": "Oat Milk (1L)",
+          "category": "Food & Drink",
+          "kg_co2": 0.9
+        },
+        {
+          "id": "food/eggs_12",
+          "label": "Eggs (12)",
+          "category": "Food & Drink",
+          "kg_co2": 2.7
+        },
+        {
+          "id": "transport/car_petrol_100km",
+          "label": "Petrol Car (100km)",
+          "category": "Transport",
+          "kg_co2": 21
+        },
+        {
+          "id": "transport/car_electric_100km",
+          "label": "Electric Car (100km)",
+          "category": "Transport",
+          "kg_co2": 7
+        },
+        {
+          "id": "transport/train_100km",
+          "label": "Train (100km)",
+          "category": "Transport",
+          "kg_co2": 4
+        },
+        {
+          "id": "transport/bus_100km",
+          "label": "Bus (100km)",
+          "category": "Transport",
+          "kg_co2": 8
+        },
+        {
+          "id": "transport/motorcycle_100km",
+          "label": "Motorcycle (100km)",
+          "category": "Transport",
+          "kg_co2": 16
+        },
+        {
+          "id": "transport/bicycle_100km",
+          "label": "Bicycle (100km)",
+          "category": "Transport",
+          "kg_co2": 0
+        },
+        {
+          "id": "home/natural_gas_kwh",
+          "label": "Natural Gas (100 kWh)",
+          "category": "Home & Energy",
+          "kg_co2": 20
+        },
+        {
+          "id": "home/led_bulb",
+          "label": "LED Bulb",
+          "category": "Home & Energy",
+          "kg_co2": 0.5
+        }
+      ]
+    },
+    "B": {
+      "count": 11,
+      "items": [
+        {
+          "id": "electronics/smartphone",
+          "label": "Smartphone",
+          "category": "Electronics",
+          "kg_co2": 70
+        },
+        {
+          "id": "electronics/tablet",
+          "label": "Tablet",
+          "category": "Electronics",
+          "kg_co2": 100
+        },
+        {
+          "id": "electronics/gaming_console",
+          "label": "Gaming Console",
+          "category": "Electronics",
+          "kg_co2": 89
+        },
+        {
+          "id": "clothing/tshirt_cotton",
+          "label": "Cotton T-Shirt",
+          "category": "Clothing & Fashion",
+          "kg_co2": 7
+        },
+        {
+          "id": "clothing/fast_fashion_item",
+          "label": "Fast Fashion Item",
+          "category": "Clothing & Fashion",
+          "kg_co2": 5
+        },
+        {
+          "id": "food/salmon_1kg",
+          "label": "Salmon (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 6
+        },
+        {
+          "id": "food/tofu_1kg",
+          "label": "Tofu (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 3
+        },
+        {
+          "id": "food/milk_1l",
+          "label": "Dairy Milk (1L)",
+          "category": "Food & Drink",
+          "kg_co2": 3.2
+        },
+        {
+          "id": "transport/flight_short",
+          "label": "Short-Haul Flight (<3h)",
+          "category": "Transport",
+          "kg_co2": 255
+        },
+        {
+          "id": "home/electricity_kwh",
+          "label": "Electricity (100 kWh)",
+          "category": "Home & Energy",
+          "kg_co2": 43
+        },
+        {
+          "id": "home/mattress",
+          "label": "Mattress",
+          "category": "Home & Energy",
+          "kg_co2": 50
+        }
+      ]
+    },
+    "C": {
+      "count": 3,
+      "items": [
+        {
+          "id": "electronics/printer",
+          "label": "Printer",
+          "category": "Electronics",
+          "kg_co2": 120
+        },
+        {
+          "id": "clothing/sneakers",
+          "label": "Sneakers",
+          "category": "Clothing & Fashion",
+          "kg_co2": 14
+        },
+        {
+          "id": "food/chicken_1kg",
+          "label": "Chicken (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 6.9
+        }
+      ]
+    },
+    "D": {
+      "count": 8,
+      "items": [
+        {
+          "id": "electronics/monitor",
+          "label": "Monitor",
+          "category": "Electronics",
+          "kg_co2": 250
+        },
+        {
+          "id": "clothing/dress",
+          "label": "Dress (polyester)",
+          "category": "Clothing & Fashion",
+          "kg_co2": 22
+        },
+        {
+          "id": "clothing/leather_boots",
+          "label": "Leather Boots",
+          "category": "Clothing & Fashion",
+          "kg_co2": 27
+        },
+        {
+          "id": "clothing/wool_sweater",
+          "label": "Wool Sweater",
+          "category": "Clothing & Fashion",
+          "kg_co2": 25
+        },
+        {
+          "id": "food/cheese_1kg",
+          "label": "Cheese (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 13.5
+        },
+        {
+          "id": "food/coffee_1kg",
+          "label": "Coffee Beans (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 17
+        },
+        {
+          "id": "home/dishwasher",
+          "label": "Dishwasher",
+          "category": "Home & Energy",
+          "kg_co2": 180
+        },
+        {
+          "id": "home/sofa",
+          "label": "Sofa",
+          "category": "Home & Energy",
+          "kg_co2": 180
+        }
+      ]
+    },
+    "E": {
+      "count": 4,
+      "items": [
+        {
+          "id": "electronics/laptop",
+          "label": "Laptop",
+          "category": "Electronics",
+          "kg_co2": 300
+        },
+        {
+          "id": "clothing/jeans",
+          "label": "Denim Jeans",
+          "category": "Clothing & Fashion",
+          "kg_co2": 33
+        },
+        {
+          "id": "food/chocolate_1kg",
+          "label": "Dark Chocolate (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 19
+        },
+        {
+          "id": "home/washing_machine",
+          "label": "Washing Machine",
+          "category": "Home & Energy",
+          "kg_co2": 250
+        }
+      ]
+    },
+    "F": {
+      "count": 6,
+      "items": [
+        {
+          "id": "electronics/desktop",
+          "label": "Desktop PC",
+          "category": "Electronics",
+          "kg_co2": 400
+        },
+        {
+          "id": "electronics/tv",
+          "label": "TV (55\")",
+          "category": "Electronics",
+          "kg_co2": 400
+        },
+        {
+          "id": "clothing/jacket_down",
+          "label": "Down Jacket",
+          "category": "Clothing & Fashion",
+          "kg_co2": 45
+        },
+        {
+          "id": "food/beef_1kg",
+          "label": "Beef (1kg)",
+          "category": "Food & Drink",
+          "kg_co2": 27
+        },
+        {
+          "id": "transport/flight_long",
+          "label": "Long-Haul Flight (10h)",
+          "category": "Transport",
+          "kg_co2": 1620
+        },
+        {
+          "id": "home/fridge",
+          "label": "Refrigerator",
+          "category": "Home & Energy",
+          "kg_co2": 320
+        }
+      ]
+    }
+  },
+  "category_totals": {
+    "electronics": {
+      "label": "Electronics",
+      "icon": "\ud83d\udcbb",
+      "total_kg": 1784,
+      "avg_kg": 178.4
+    },
+    "clothing": {
+      "label": "Clothing & Fashion",
+      "icon": "\ud83d\udc55",
+      "total_kg": 178,
+      "avg_kg": 22.25
+    },
+    "food": {
+      "label": "Food & Drink",
+      "icon": "\ud83e\udd69",
+      "total_kg": 99.2,
+      "avg_kg": 9.92
+    },
+    "transport": {
+      "label": "Transport",
+      "icon": "\u2708\ufe0f",
+      "total_kg": 1931,
+      "avg_kg": 241.38
+    },
+    "home": {
+      "label": "Home & Energy",
+      "icon": "\ud83c\udfe0",
+      "total_kg": 1043.5,
+      "avg_kg": 130.44
+    }
+  },
+  "summary": {
+    "total_items": 44,
+    "greenest_item": "Bicycle (100km)",
+    "greenest_kg": 0,
+    "worst_item": "Long-Haul Flight (10h)",
+    "worst_kg": 1620
+  }
+}

@@ -1,15 +1,20 @@
+Here you go — **fully formatted, ready to paste into GitHub README.md**:
+
+---
+
 # 🛒 CarbonCart — Know Your Footprint Before You Buy
 
-> Built for **Dev Season of Code 2026** | Themes: AI/ML · Data Science · Sustainability · Social Good
+> Built for **Dev Season of Code 2026** | Themes: Sustainability · Data Engineering · Social Good
 
-[![Pipeline](https://img.shields.io/github/actions/workflow/status/shnhdan/carboncart/pipeline.yml?label=pipeline&style=flat-square)](https://github.com/shnhdan/carboncart/actions)
+[![Pipeline](https://img.shields.io/github/actions/workflow/status/shnhdan/carboncart/pipeline.yml?label=pipeline\&style=flat-square)](https://github.com/shnhdan/carboncart/actions)
 [![Live Demo](https://img.shields.io/badge/live-demo-00ff7f?style=flat-square)](https://shnhdan.github.io/carboncart)
 
 ---
 
 ## 🌍 What is CarbonCart?
 
-CarbonCart shows you the **CO₂ cost** of everyday purchases — before you buy. Add products to your cart, see your total carbon footprint, get eco-grades (A–F), real-world comparisons, and smarter alternatives.
+CarbonCart shows the **CO₂ cost of everyday products** before you buy.
+Add items to your cart, see your total emissions, eco-grades (A–F), real-world comparisons, and smarter alternatives — instantly.
 
 ---
 
@@ -18,42 +23,43 @@ CarbonCart shows you the **CO₂ cost** of everyday purchases — before you buy
 ```
 emissions.json (raw data)
         ↓
-[1] validate.py      → data_quality_report.json   (DE Feature 1)
+[1] validate.py      → data_quality_report.json
         ↓
-[2] enrich_data.py   → emissions_enriched.json    (Core Pipeline)
+[2] enrich_data.py   → emissions_enriched.json
         ↓
-[3] snapshot.py      → snapshots/YYYY-MM-DD.json  (DE Feature 2)
+[3] snapshot.py      → snapshots/YYYY-MM-DD.json
                      → trends.json
         ↓
-[4] aggregate.py     → stats_table.json            (DE Feature 3)
+[4] aggregate.py     → stats_table.json
         ↓
 GitHub Pages → index.html (3-tab UI)
 ```
 
 ---
 
-## ⚙️ Data Engineering Features
+## ⚙️ Key Data Engineering Features
 
-### DE Feature 1 — Data Quality Validation
-- IQR-based outlier detection per category
-- Schema completeness checks (required fields, positive values)
-- Confidence scoring per item (high / medium / low)
-- CI **fails the build** if overall quality score < 80
-- Output: `public/data_quality_report.json` → visualised in **Quality Report** tab
+### ✅ Data Validation
 
-### DE Feature 2 — Historical Snapshots & Trends
-- Every pipeline run saves `snapshots/YYYY-MM-DD.json`
-- Tracks: avg CO₂, product count, grade distribution over time
-- Generates `trends.json` with chart-ready time series data
-- Runs weekly on schedule via GitHub Actions cron
+* IQR-based outlier detection per category
+* Schema checks (required fields + positive values)
+* Confidence scoring per item
+* CI fails if overall quality score < 80
 
-### DE Feature 3 — Pre-computed Aggregations
-- Global leaderboard: top 10 greenest & worst products
-- Substitution table: "swap X for Y, save Z kg" per category
-- Category vs category CO₂ comparison matrix
-- Grade band distribution (A–F counts)
-- All served as static JSON — fast, no runtime compute
-- Output: `public/stats_table.json` → visualised in **Data Explorer** tab
+### 📈 Historical Snapshots
+
+* Saves `snapshots/YYYY-MM-DD.json` on each run
+* Tracks average CO₂, product count, grade distribution
+* Generates `trends.json` for time-series charts
+* Runs weekly via GitHub Actions
+
+### 📊 Pre-computed Aggregations
+
+* Top 10 greenest & worst products
+* Smart substitution table (“swap X for Y, save Z kg”)
+* Grade distribution (A–F)
+* Category comparison metrics
+* All served as static JSON for fast performance
 
 ---
 
@@ -61,37 +67,26 @@ GitHub Pages → index.html (3-tab UI)
 
 ```
 carboncart/
-├── data/
-│   └── emissions.json              # Raw source of truth (44 products)
-├── pipeline/
-│   ├── validate.py                 # DE1: Quality & validation
-│   ├── enrich_data.py              # Core: Enrichment pipeline
-│   ├── snapshot.py                 # DE2: Historical snapshots
-│   └── aggregate.py                # DE3: Pre-computed stats
-├── public/
-│   ├── index.html                  # Full 3-tab UI
-│   ├── emissions_enriched.json     # Pipeline output
-│   ├── stats_table.json            # Aggregation output
-│   ├── data_quality_report.json    # Validation output
-│   └── trends.json                 # Trend tracker output
-├── snapshots/
-│   └── YYYY-MM-DD.json             # Historical snapshots
-├── tests/
-│   └── test_all.py                 # 9 tests covering all pipelines
-└── .github/workflows/
-    └── pipeline.yml                # CI/CD: all 4 steps + deploy
+├── data/                 # Raw emissions dataset
+├── pipeline/             # Validation, enrichment, snapshot, aggregation
+├── public/               # UI + generated JSON outputs
+├── snapshots/            # Historical data
+├── tests/                # Automated pipeline tests
+└── .github/workflows/    # CI/CD pipeline
 ```
 
 ---
 
-## 🚀 Deploy (100% Free)
+## 🚀 Deploy (Free via GitHub Pages)
 
-1. Fork this repo
-2. Settings → Pages → source: `gh-pages` branch
-3. Actions tab → enable workflows → Run workflow
-4. Live at: `https://YOUR_USERNAME.github.io/carboncart`
+1. Fork the repo
+2. Enable Pages (source: `gh-pages` branch)
+3. Enable Actions → Run workflow
+4. Visit: `https://YOUR_USERNAME.github.io/carboncart`
 
-### Local Dev
+---
+
+## 💻 Local Development
 
 ```bash
 python3 pipeline/validate.py
@@ -106,12 +101,16 @@ cd public && python3 -m http.server 8080
 
 ## 📊 UI Tabs
 
-| Tab | What it shows |
-|---|---|
-| 🛒 Shop | Product grid, eco-grades, cart, comparisons, breakdown |
-| 📊 Data Explorer | Leaderboard, substitutions, grade dist, cross-category ratios |
-| ✅ Quality Report | Per-item validation scores, IQR outlier flags, CI status |
+| Tab              | Description                                       |
+| ---------------- | ------------------------------------------------- |
+| 🛒 Shop          | Cart, eco-grades, comparisons, emission breakdown |
+| 📊 Data Explorer | Leaderboards, substitutions, grade distribution   |
+| ✅ Quality Report | Validation scores, outlier flags, CI status       |
 
 ---
 
-*MIT License · Data: EPA · ADEME · Open LCA*
+MIT License · Data sources: EPA · ADEME · OpenLCA
+
+---
+
+If you want a more aggressive, recruiter-optimized README (less explanation, more impact), I can rewrite it sharper.

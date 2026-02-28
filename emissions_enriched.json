@@ -2,7 +2,7 @@
   "meta": {
     "pipeline_version": "2.0.0",
     "avg_person_annual_kg": 4000,
-    "generated_at": "2026-02-28T18:40:29.611506Z"
+    "generated_at": "2026-02-28T18:41:16.199037Z"
   },
   "version": "1.0.0",
   "last_updated": "2026-02-28",
@@ -34,7 +34,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611530Z",
+            "generated_at": "2026-02-28T18:41:16.199065Z",
             "confidence": "high"
           }
         },
@@ -53,7 +53,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611541Z",
+            "generated_at": "2026-02-28T18:41:16.199074Z",
             "confidence": "high"
           }
         },
@@ -72,7 +72,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611549Z",
+            "generated_at": "2026-02-28T18:41:16.199081Z",
             "confidence": "high"
           }
         },
@@ -91,7 +91,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611558Z",
+            "generated_at": "2026-02-28T18:41:16.199089Z",
             "confidence": "high"
           }
         },
@@ -110,7 +110,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611566Z",
+            "generated_at": "2026-02-28T18:41:16.199096Z",
             "confidence": "high"
           }
         },
@@ -129,7 +129,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611574Z",
+            "generated_at": "2026-02-28T18:41:16.199103Z",
             "confidence": "high"
           }
         },
@@ -148,7 +148,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611584Z",
+            "generated_at": "2026-02-28T18:41:16.199108Z",
             "confidence": "high"
           }
         },
@@ -167,7 +167,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611595Z",
+            "generated_at": "2026-02-28T18:41:16.199119Z",
             "confidence": "high"
           }
         },
@@ -186,7 +186,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611604Z",
+            "generated_at": "2026-02-28T18:41:16.199129Z",
             "confidence": "high"
           }
         },
@@ -205,7 +205,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611611Z",
+            "generated_at": "2026-02-28T18:41:16.199135Z",
             "confidence": "high"
           }
         }
@@ -237,7 +237,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611625Z",
+            "generated_at": "2026-02-28T18:41:16.199148Z",
             "confidence": "high"
           }
         },
@@ -256,7 +256,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611635Z",
+            "generated_at": "2026-02-28T18:41:16.199156Z",
             "confidence": "high"
           }
         },
@@ -275,7 +275,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611640Z",
+            "generated_at": "2026-02-28T18:41:16.199161Z",
             "confidence": "high"
           }
         },
@@ -294,7 +294,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611646Z",
+            "generated_at": "2026-02-28T18:41:16.199166Z",
             "confidence": "high"
           }
         },
@@ -313,7 +313,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611651Z",
+            "generated_at": "2026-02-28T18:41:16.199171Z",
             "confidence": "high"
           }
         },
@@ -332,7 +332,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611657Z",
+            "generated_at": "2026-02-28T18:41:16.199177Z",
             "confidence": "high"
           }
         },
@@ -351,7 +351,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611665Z",
+            "generated_at": "2026-02-28T18:41:16.199184Z",
             "confidence": "high"
           }
         },
@@ -370,7 +370,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611673Z",
+            "generated_at": "2026-02-28T18:41:16.199191Z",
             "confidence": "high"
           }
         }
@@ -402,7 +402,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611687Z",
+            "generated_at": "2026-02-28T18:41:16.199215Z",
             "confidence": "high"
           }
         },
@@ -421,7 +421,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611695Z",
+            "generated_at": "2026-02-28T18:41:16.199222Z",
             "confidence": "high"
           }
         },
@@ -440,7 +440,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611701Z",
+            "generated_at": "2026-02-28T18:41:16.199228Z",
             "confidence": "high"
           }
         },
@@ -459,7 +459,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611707Z",
+            "generated_at": "2026-02-28T18:41:16.199233Z",
             "confidence": "high"
           }
         },
@@ -478,7 +478,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611714Z",
+            "generated_at": "2026-02-28T18:41:16.199239Z",
             "confidence": "high"
           }
         },
@@ -497,7 +497,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611720Z",
+            "generated_at": "2026-02-28T18:41:16.199245Z",
             "confidence": "high"
           }
         },
@@ -516,7 +516,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611727Z",
+            "generated_at": "2026-02-28T18:41:16.199252Z",
             "confidence": "high"
           }
         },
@@ -535,7 +535,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611738Z",
+            "generated_at": "2026-02-28T18:41:16.199259Z",
             "confidence": "high"
           }
         },
@@ -554,7 +554,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611747Z",
+            "generated_at": "2026-02-28T18:41:16.199265Z",
             "confidence": "high"
           }
         },
@@ -573,7 +573,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611753Z",
+            "generated_at": "2026-02-28T18:41:16.199272Z",
             "confidence": "high"
           }
         }
@@ -605,7 +605,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611766Z",
+            "generated_at": "2026-02-28T18:41:16.199284Z",
             "confidence": "high"
           }
         },
@@ -624,7 +624,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611772Z",
+            "generated_at": "2026-02-28T18:41:16.199289Z",
             "confidence": "high"
           }
         },
@@ -643,7 +643,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611778Z",
+            "generated_at": "2026-02-28T18:41:16.199295Z",
             "confidence": "high"
           }
         },
@@ -662,7 +662,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611783Z",
+            "generated_at": "2026-02-28T18:41:16.199300Z",
             "confidence": "high"
           }
         },
@@ -681,7 +681,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611788Z",
+            "generated_at": "2026-02-28T18:41:16.199305Z",
             "confidence": "high"
           }
         },
@@ -700,7 +700,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611796Z",
+            "generated_at": "2026-02-28T18:41:16.199312Z",
             "confidence": "high"
           }
         },
@@ -719,7 +719,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611802Z",
+            "generated_at": "2026-02-28T18:41:16.199317Z",
             "confidence": "high"
           }
         },
@@ -738,7 +738,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611807Z",
+            "generated_at": "2026-02-28T18:41:16.199322Z",
             "confidence": "medium"
           }
         }
@@ -770,7 +770,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611818Z",
+            "generated_at": "2026-02-28T18:41:16.199332Z",
             "confidence": "high"
           }
         },
@@ -789,7 +789,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611824Z",
+            "generated_at": "2026-02-28T18:41:16.199337Z",
             "confidence": "high"
           }
         },
@@ -808,7 +808,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611832Z",
+            "generated_at": "2026-02-28T18:41:16.199344Z",
             "confidence": "high"
           }
         },
@@ -827,7 +827,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611840Z",
+            "generated_at": "2026-02-28T18:41:16.199351Z",
             "confidence": "high"
           }
         },
@@ -846,7 +846,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611846Z",
+            "generated_at": "2026-02-28T18:41:16.199357Z",
             "confidence": "high"
           }
         },
@@ -865,7 +865,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611852Z",
+            "generated_at": "2026-02-28T18:41:16.199362Z",
             "confidence": "high"
           }
         },
@@ -884,7 +884,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611857Z",
+            "generated_at": "2026-02-28T18:41:16.199368Z",
             "confidence": "high"
           }
         },
@@ -903,7 +903,7 @@
           "lineage": {
             "source": "Compiled from EPA, ADEME, and open lifecycle assessment databases",
             "pipeline_version": "2.0.0",
-            "generated_at": "2026-02-28T18:40:29.611864Z",
+            "generated_at": "2026-02-28T18:41:16.199373Z",
             "confidence": "medium"
           }
         }

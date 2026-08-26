@@ -1,6 +1,4 @@
-Here you go — **fully formatted, ready to paste into GitHub README.md**:
 
----
 
 # 🛒 CarbonCart — Know Your Footprint Before You Buy
 
@@ -74,15 +72,6 @@ carboncart/
 ├── tests/                # Automated pipeline tests
 └── .github/workflows/    # CI/CD pipeline
 ```
-
----
-
-## 🚀 Deploy (Free via GitHub Pages)
-
-1. Fork the repo
-2. Enable Pages (source: `gh-pages` branch)
-3. Enable Actions → Run workflow
-4. Visit: `https://YOUR_USERNAME.github.io/carboncart`
 
 ---
 
